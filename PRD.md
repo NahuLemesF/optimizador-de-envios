@@ -35,3 +35,29 @@ Construir una herramienta logística que automatice la selección del proveedor 
 - Módulo de Pagos  
 - Gestión de Usuarios y creación de perfiles  
 
+---
+
+## Riesgos de negocio y técnicos
+### Negocio
+
+- **Pérdidas financieras por fallos de lógica:**  
+  Si el algoritmo calcula mal el cruce entre peso y distancia al destino, podría asignar sistemáticamente la opción más cara cuando el usuario prioriza el costo.
+
+- **Incumplimiento de la propuesta de valor:**  
+  Si el usuario prioriza “más rápido” y el sistema falla en estimar los tiempos, el producto puede llegar tarde, afectando la reputación del negocio.
+
+- **Incompatibilidad del modelo del “Proveedor local”:**  
+  Empresas como DHL y FedEx tienen sistemas y matrices de precios estandarizados y muy estructurados. Un proveedor local en cambio, puede ser más informal, y el sistema correría riesgos tales como:
+  - Cambios de precio sin aviso  
+  - Información desactualizada  
+
+### Tecnico
+
+- **Si adaptamos el negocio acoplado fuertemente solo a DHL, FedEx o local**, va a complicar la escalabilidad si quiero por ejemplo agregar un nuevo proveedor.
+
+- **Inconsistencia en los datos de entrada:**  
+ Existe riesgo de fallos si el sistema no gestiona los tipos de datos de forma adecuada (ej. tipos de medidas en peso y distancia, tipo de moneda).
+
+
+- **Manejo de casos límite:**  
+El sistema debe manejar casos límite como por ejemplo el considerar destinos en donde los proveedores no tengan cobertura.
