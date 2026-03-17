@@ -40,7 +40,8 @@ Construir una herramienta logística que automatice la selección del proveedor 
 - Módulo de Tracking (rastreo)  
 - Integración en tiempo real con APIs de FedEx, DHL, Local, etc.  
 - Módulo de Pagos  
-- Gestión de Usuarios y creación de perfiles  
+- Gestión de Usuarios y creación de perfiles
+- Gestión de Pedidos Internacionales  
 
 ---
 
