@@ -85,6 +85,16 @@ Escenario: Recomendación principal según prioridad de menor tiempo
 Y la opción recomendada debe corresponder a la opción de menor tiempo disponible
 ```
 
+```gherkin
+Escenario: Recomendación principal con empate en menor costo
+Dado que el usuario definió la prioridad de menor costo
+Y existen múltiples opciones con el mismo menor costo disponible
+Cuando el sistema calcula las opciones disponibles
+Entonces el sistema debe devolver una opción recomendada
+Y la opción recomendada debe corresponder a la de menor tiempo de entrega
+```
+
+
 ---
 
 ## HU4 - Consultar opciones alternativas
