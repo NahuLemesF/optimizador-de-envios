@@ -6,7 +6,7 @@
 **quiero** registrar un pedido  
 **para** poder hacer el proceso del cálculo del envío.
 
-### Criterios de Aceptación:
+### Criterios de Aceptación
 
 ```gherkin
 Escenario: Ingreso de Datos Válidos
@@ -35,6 +35,7 @@ Escenario: Peso no permitido
 ---
 
 ## HU2 - Definir prioridad del envío
+
 **Como** usuario del sistema  
 **quiero** seleccionar si prefiero un envío económico o más rápido  
 **para** poder hacer el proceso del cálculo del envío.
@@ -50,13 +51,15 @@ Escenario: Selección de prioridad por menor costo
 
 ```gherkin
 Escenario: Selección de prioridad por menor tiempo de entrega
-	Dado que el usuario registró un pedido válido
-	Cuando selecciona prioridad de menor tiempo de entrega
-	Entonces el sistema debe utilizar el tiempo de entrega como criterio para generar la recomendación
+    Dado que el usuario registró un pedido válido
+    Cuando selecciona prioridad de menor tiempo de entrega
+    Entonces el sistema debe utilizar el tiempo de entrega como criterio para generar la recomendación
 ```
+
 ---
 
 ## HU3 - Obtener recomendación principal
+
 **Como** usuario del sistema  
 **Quiero** que el sistema me recomiende la mejor opción de envío  
 **Para** elegir una alternativa que cumpla con mis necesidades
@@ -65,17 +68,17 @@ Escenario: Selección de prioridad por menor tiempo de entrega
 
 ```gherkin
 Escenario: Recomendación principal según prioridad de menor costo
-	Dado que el usuario definió la prioridad de menor costo
-	Cuando el sistema calcula las opciones disponibles
-	Entonces el sistema debe devolver la opción recomendada
+    Dado que el usuario definió la prioridad de menor costo
+    Cuando el sistema calcula las opciones disponibles
+    Entonces el sistema debe devolver la opción recomendada
     Y la opción recomendada debe corresponder a la opción de menor costo disponible
 ```
 
 ```gherkin
 Escenario: Recomendación principal según prioridad de menor tiempo
-	Dado que el usuario definió la prioridad de menor tiempo
-	Cuando el sistema calcula las opciones disponibles
-	Entonces el sistema debe devolver la opción recomendada
+    Dado que el usuario definió la prioridad de menor tiempo
+    Cuando el sistema calcula las opciones disponibles
+    Entonces el sistema debe devolver la opción recomendada
     Y la opción recomendada debe corresponder a la opción de menor tiempo disponible
 ```
 
@@ -100,13 +103,23 @@ Escenario: Recomendación principal con empate en menor tiempo
 ---
 
 ## HU4 - Consultar opciones alternativas
+
 **Como** usuario del sistema  
 **Quiero** ver otras opciones disponibles  
 **Para** compararlas con la recomendación principal y evaluar la opción más conveniente.
 
+```gherkin
+Escenario: Visualización de alternativas
+    Dado que el sistema generó una recomendación principal
+    Y existen otras opciones de envío disponibles 
+    Cuando el sistema muestra la recomendación principal
+    Entonces el sistema debe mostrar automáticamente las opciones alternativas disponibles
+```
+
 ---
 
 ## HU5 - Seleccionar y confirmar proveedor
+
 **Como** usuario del sistema  
 **Quiero** seleccionar el proveedor deseado  
 **Para** continuar con el proceso del pedido
