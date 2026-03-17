@@ -61,6 +61,16 @@ Escenario: Selección de prioridad por menor tiempo de entrega
 **Quiero** que el sistema me recomiende la mejor opción de envío  
 **Para** elegir una alternativa que cumpla con mis necesidades
 
+### Criterios de Aceptación
+
+```gherkin
+Escenario: Recomendación principal según prioridad de menor costo
+	Dado que el usuario definió la prioridad de menor costo
+	Cuando el sistema calcula las opciones disponibles
+	Entonces el sistema debe devolver la opción recomendada
+    Y la opción recomendada debe corresponder a la opción de menor costo disponible
+```
+
 ---
 
 ## HU4 - Consultar opciones alternativas
