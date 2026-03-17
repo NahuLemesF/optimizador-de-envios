@@ -25,23 +25,19 @@ Construir una herramienta logística que automatice la selección del proveedor 
 ## Alcance del MVP
 
 ### In
-- Registro de pedido:
-  - Origen
-  - Destino  
-  - Peso  
-- Selector de prioridad:
-  - Optimización por costos (tarifa más baja)  
-  - Optimización por velocidad (servicio más ágil)  
-- Motor de evaluación centralizado:
-  - Evalúa y cruza entre costo y velocidad de las empresas de transporte (FedEx, DHL, Local)  
-- El sistema debe devolver el resultado de la evaluación otorgando al cliente final el proveedor más adecuado según costos y tiempo.
+- **Registro de datos del envío:** el sistema permite ingresar origen, destino y peso del pedido.
+- **Selector de prioridad del envío**: el sistema permite elegir si se desea priorizar **menor costo** o **menor tiempo de entrega**.
+- **Motor de evaluación centralizado:** el sistema compara las opciones de transporte disponibles (*FedEx*, *DHL* y *proveedores locales*) y evalúa considerando costo y tiempo estimado.
+- **Generación de recomendación principal:** el sistema devuelve la opción más adecuada según la prioridad seleccionada por el usuario.
+- **Visualización de opciones alternativas:** el sistema muestra otras opciones disponibles para que el usuario pueda compararlas con la recomendación principal.
+- **Selección de proveedor:** el usuario puede elegir una de las opciones disponibles para continuar con el proceso del pedido.
 
 ### Out
-- Módulo de Tracking (rastreo)  
-- Integración en tiempo real con APIs de FedEx, DHL, Local, etc.  
-- Módulo de Pagos  
-- Gestión de Usuarios y creación de perfiles
-- Gestión de Pedidos Internacionales  
+- **Gestión de usuarios y perfiles.**
+- **Integración en tiempo real con APIs de proveedores logísticos.**
+- **Módulo de pagos.**
+- **Seguimiento del envío (tracking).**
+- **Gestión de pedidos internacionales.**
 
 ---
 
@@ -61,10 +57,8 @@ Construir una herramienta logística que automatice la selección del proveedor 
 
 ### Técnico
 
-- **Si adaptamos el negocio acoplado fuertemente solo a DHL, FedEx o local**, va a dificultar la escalabilidad (ejemplo: agregar un nuevo proveedor).
+- **Acoplamiento fuerte a proveedores específicos:** una implementación poco flexible puede dificultar la escalabilidad (ejemplo: agregar un nuevo proveedor) en futuras versiones.
 
-- **Inconsistencia en los datos de entrada:**  
- Existe riesgo de fallos si el sistema no gestiona los tipos de datos de forma adecuada (ejemplo: tipos de medidas en peso, origen y destino correctos, tipo de moneda).
+- **Inconsistencia en los datos de entrada:** si el sistema no gestiona los tipos de datos de forma adecuada (ejemplo: tipos de medidas en peso, origen y destino correctos, tipo de moneda) podría verse afectado el cálculo de las opciones disponibles.
 
-- **Manejo de casos límite:**  
-El sistema debe manejar casos límite como por ejemplo el considerar destinos en donde los proveedores no tengan cobertura o el peso máximo permitido por cada empresa logística.
+- **Manejo insuficiente de casos límite:** destinos sin cobertura o pesos no admitidos por los proveedores pueden generar fallos si no se controlan adecuadamente.
