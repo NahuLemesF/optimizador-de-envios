@@ -19,6 +19,14 @@
 **Entonces** el sistema no debe permitir continuar con el cálculo del envío
 **Y** debe informar que no hay proveedores disponibles para ese destino
 
+#### Escenario 3: Peso no permitido
+**Dado** que un cliente intenta enviar un pedido de gran porte
+**Cuando** ingresa un peso mayor al permitido por los proveedores logísticos
+**Entonces** el sistema no debe permitir continuar con el cálculo del envío
+**Y** debe informar que el peso ingresado no está cubierto por los proveedores disponibles
+
+---
+
 ## HU2 - Definir prioridad del envió
 - **Como** usuario del sistema
 - **quiero** seleccionar si prefiero un envío económico o más rápido 
