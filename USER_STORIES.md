@@ -41,24 +41,18 @@ Escenario: Peso no permitido
 
 ### Criterios de Aceptación
 
-## HU2 - Definir Prioridad del envío
-
-**Como** usuario del sistema  
-**quiero** seleccionar si prefiero un envío económico o más rápido  
-**para** que el sistema tenga en cuenta mi prioridad al recomendar opciones
-
-### Criterios de Aceptación
+```gherkin
+Escenario: Selección de prioridad por menor costo
+    Dado que el usuario registró un pedido válido
+    Cuando selecciona prioridad de menor costo
+    Entonces el sistema debe utilizar el costo como criterio principal para generar la recomendación
+```
 
 ```gherkin
-Scenario Outline: Selección de prioridad de envío
-  Dado que el usuario registró un pedido válido
-  Cuando selecciona prioridad de <prioridad>
-  Entonces el sistema debe utilizar <criterio> como criterio principal para generar la recomendación
-
-Examples:
-  | prioridad               | criterio             |
-  | menor costo             | el costo             |
-  | menor tiempo de entrega | el tiempo de entrega |
+Escenario: Selección de prioridad por menor tiempo de entrega
+	Dado que el usuario registró un pedido válido
+	Cuando selecciona prioridad de menor tiempo de entrega
+	Entonces el sistema debe utilizar el tiempo de entrega como criterio para generar la recomendación
 ```
 ---
 
@@ -82,18 +76,26 @@ Escenario: Recomendación principal según prioridad de menor tiempo
 	Dado que el usuario definió la prioridad de menor tiempo
 	Cuando el sistema calcula las opciones disponibles
 	Entonces el sistema debe devolver la opción recomendada
-Y la opción recomendada debe corresponder a la opción de menor tiempo disponible
+    Y la opción recomendada debe corresponder a la opción de menor tiempo disponible
 ```
 
 ```gherkin
 Escenario: Recomendación principal con empate en menor costo
-Dado que el usuario definió la prioridad de menor costo
-Y existen múltiples opciones con el mismo menor costo disponible
-Cuando el sistema calcula las opciones disponibles
-Entonces el sistema debe devolver una opción recomendada
-Y la opción recomendada debe corresponder a la de menor tiempo de entrega
+    Dado que el usuario definió la prioridad de menor costo
+    Y existen múltiples opciones con el mismo menor costo disponible
+    Cuando el sistema calcula las opciones disponibles
+    Entonces el sistema debe devolver una opción recomendada
+    Y la opción recomendada debe corresponder a la de menor tiempo de entrega
 ```
 
+```gherkin
+Escenario: Recomendación principal con empate en menor tiempo
+    Dado que el usuario definió la prioridad de menor tiempo
+    Y existen múltiples opciones con el mismo menor tiempo disponible
+    Cuando el sistema calcula las opciones disponibles
+    Entonces el sistema debe devolver una opción recomendada
+    Y la opción recomendada debe corresponder a la de menor costo
+```
 
 ---
 
