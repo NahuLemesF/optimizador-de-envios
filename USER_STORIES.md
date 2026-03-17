@@ -14,3 +14,8 @@
 - **Como** usuario del sistema
 - **Quiero** que el sistema me recomiende la mejor opción de envío
 - **Para** elegir una alternativa que cumpla con mis necesidades
+
+## HU4 - Consultar opciones alternativas
+- **Como** usuario del sistema
+- **Quiero** ver otras opciones disponibles
+- **Para** compararlas con la recomendación principal y evaluar la opción más conveniente.
