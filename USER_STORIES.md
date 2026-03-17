@@ -4,3 +4,9 @@
 - **Como** usuario del sistema
 - **quiero** registrar un pedido 
 - **para** poder hacer el proceso del cálculo del envío.
+
+## HU2 - Definir prioridad del envió
+- **Como** usuario del sistema
+- **quiero** seleccionar si prefiero un envío económico o más rápido 
+- **para** poder hacer el proceso del cálculo del envío.
+
