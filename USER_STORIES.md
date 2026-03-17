@@ -48,6 +48,12 @@ Escenario: Selección de prioridad por menor costo
     Entonces el sistema debe utilizar el costo como criterio principal para generar la recomendación
 ```
 
+```gherkin
+Escenario: Selección de prioridad por menor tiempo de entrega
+	Dado que el usuario registró un pedido válido
+	Cuando selecciona prioridad de menor tiempo de entrega
+	Entonces el sistema debe utilizar el tiempo de entrega como criterio para generar la recomendación
+```
 ---
 
 ## HU3 - Obtener recomendación principal
