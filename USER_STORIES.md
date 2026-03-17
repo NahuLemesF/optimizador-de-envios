@@ -41,18 +41,24 @@ Escenario: Peso no permitido
 
 ### Criterios de Aceptación
 
-```gherkin
-Escenario: Selección de prioridad por menor costo
-    Dado que el usuario registró un pedido válido
-    Cuando selecciona prioridad de menor costo
-    Entonces el sistema debe utilizar el costo como criterio principal para generar la recomendación
-```
+## HU2 - Definir Prioridad del envío
+
+**Como** usuario del sistema  
+**quiero** seleccionar si prefiero un envío económico o más rápido  
+**para** que el sistema tenga en cuenta mi prioridad al recomendar opciones
+
+### Criterios de Aceptación
 
 ```gherkin
-Escenario: Selección de prioridad por menor tiempo de entrega
-	Dado que el usuario registró un pedido válido
-	Cuando selecciona prioridad de menor tiempo de entrega
-	Entonces el sistema debe utilizar el tiempo de entrega como criterio para generar la recomendación
+Scenario Outline: Selección de prioridad de envío
+  Dado que el usuario registró un pedido válido
+  Cuando selecciona prioridad de <prioridad>
+  Entonces el sistema debe utilizar <criterio> como criterio principal para generar la recomendación
+
+Examples:
+  | prioridad               | criterio             |
+  | menor costo             | el costo             |
+  | menor tiempo de entrega | el tiempo de entrega |
 ```
 ---
 
