@@ -39,6 +39,15 @@ Escenario: Peso no permitido
 **quiero** seleccionar si prefiero un envío económico o más rápido  
 **para** poder hacer el proceso del cálculo del envío.
 
+### Criterios de Aceptación
+
+```gherkin
+Escenario: Selección de prioridad por menor costo
+    Dado que el usuario registró un pedido válido
+    Cuando selecciona prioridad de menor costo
+    Entonces el sistema debe utilizar el costo como criterio principal para generar la recomendación
+```
+
 ---
 
 ## HU3 - Obtener recomendación principal
