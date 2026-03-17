@@ -33,3 +33,8 @@
 - **Como** usuario del sistema
 - **Quiero** ver otras opciones disponibles
 - **Para** compararlas con la recomendación principal y evaluar la opción más conveniente.
+
+## HU5 - Seleccionar y confirmar proveedor
+- **Como** usuario del sistema
+- **Quiero** seleccionar el proveedor deseado
+- **Para** continuar con el proceso del pedido
