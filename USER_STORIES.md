@@ -13,6 +13,12 @@
 **Entonces** el sistema debe registrar los datos del pedido
 **Y** debe permitir continuar con el cálculo del envío
 
+#### Escenario 2: Destino sin Cobertura
+**Dado** que el usuario necesita enviar un producto
+**Cuando** ingresa un destino fuera de la cobertura de los proveedores logísticos
+**Entonces** el sistema no debe permitir continuar con el cálculo del envío
+**Y** debe informar que no hay proveedores disponibles para ese destino
+
 ## HU2 - Definir prioridad del envió
 - **Como** usuario del sistema
 - **quiero** seleccionar si prefiero un envío económico o más rápido 
