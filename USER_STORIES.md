@@ -75,8 +75,7 @@ Escenario: Peso no permitido
 ### Definition of Ready (DoR)
 
 - La historia de usuario está redactada de forma clara.
-- Están definidos los datos de usuario para registrar el pedido: origen, peso y destino
-- Las reglas de negocio sobre cobertura y peso permitido están claras.
+- Están definidas las opciones de envio que se tendran en cuenta; economico o rapido
 - Los criterios de aceptación están definidos.
 - La historia está revisada por DEV y QA.
 - La historia puede ser estimada por el equipo técnico.
@@ -98,6 +97,11 @@ Escenario: Selección de prioridad por menor tiempo de entrega
 ```
 
 ### Definition of Done (DoD)
+- La funcionalidad de elegir entre los dos tipos de envio esta implementada
+- El sistema permite elegir entre envio con opcion economica o rapida
+- El sistema no permite hacer el calculo para la recomendacion sin antes haber elegido una de las opciones de envio
+- Se cumplen los criterios de aceptacion definidos
+- La historia fue validada por QA
 
 
 
