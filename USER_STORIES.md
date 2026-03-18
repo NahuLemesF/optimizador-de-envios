@@ -60,9 +60,24 @@ Escenario: Peso no permitido
 
 ## HU2 - Definir prioridad del envío
 
+### Descripcion
+
 **Como** usuario del sistema  
-**quiero** seleccionar si prefiero un envío económico o más rápido  
-**para** poder hacer el proceso del cálculo del envío.
+**Quiero** seleccionar si prefiero un envío económico o más rápido  
+**Para** poder hacer el proceso del cálculo del envío.
+
+### Valor de Negocio
+
+### Reglas Relacionadas
+
+### Definition of Ready (DoR)
+
+- La historia de usuario está redactada de forma clara.
+- Están definidos los datos de usuario para registrar el pedido: origen, peso y destino
+- Las reglas de negocio sobre cobertura y peso permitido están claras.
+- Los criterios de aceptación están definidos.
+- La historia está revisada por DEV y QA.
+- La historia puede ser estimada por el equipo técnico.
 
 ### Criterios de Aceptación
 
@@ -80,7 +95,9 @@ Escenario: Selección de prioridad por menor tiempo de entrega
     Entonces el sistema debe utilizar el tiempo de entrega como criterio para generar la recomendación
 ```
 
----
+### Definition of Done (DoD)
+
+
 
 ## HU3 - Obtener recomendación principal
 
