@@ -1,21 +1,22 @@
 # Historias de Usuario - Optimizador de Envíos
 
-## HU1
+## HU1 - Registrar Pedido
 
-### Definition of Ready (DoR)
-
-- La historia de usuario debe estar redactada de forma clara.
-- Deben estar definidos los datos de usuario para registrar el pedido: origen, peso y destino
-- Deben estar claras las reglas de negocio sobre cobertura y peso permitido.
-- Los criterios de aceptación deben estar definidos.
-- La historia debe estar revisada por DEV y QA.
-- La historia debe ser poder estimada por el equipo técnico.
-
-### HU1 - Registrar Pedido
+### Descripción
 
 **Como** usuario del sistema  
 **quiero** registrar un pedido  
 **para** poder hacer el proceso del cálculo del envío.
+
+
+### Definition of Ready (DoR)
+
+- La historia de usuario está redactada de forma clara.
+- Están definidos los datos de usuario para registrar el pedido: origen, peso y destino
+- Las reglas de negocio sobre cobertura y peso permitido están claras.
+- Los criterios de aceptación están definidos.
+- La historia está revisada por DEV y QA.
+- La historia puede ser estimada por el equipo técnico.
 
 ### Criterios de Aceptación
 
@@ -42,6 +43,14 @@ Escenario: Peso no permitido
     Entonces el sistema no debe permitir continuar con el cálculo del envío
     Y debe informar que el peso ingresado no está cubierto por los proveedores disponibles
 ```
+
+### Definition of Done (DoD)
+- La funcionalidad de registro de pedido está implementada.
+- El sistema permite registrar origen, destino y peso válidos.
+- El sistema bloquea destinos sin cobertura.
+- El sistema bloquea pesos no permitidos.
+- Se cumplen los criterios de aceptación definidos.
+- La historia fue validada por QA.
 
 ---
 
