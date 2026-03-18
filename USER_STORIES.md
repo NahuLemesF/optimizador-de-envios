@@ -1,19 +1,17 @@
-# Historias de Usuario Proyecto - Optimizacion de Envios
+# Historias de Usuario - Optimizador de Envíos
 
-## Definition of Ready (DoR)
+## HU1
 
-**Una Historia de Usuario se considera lista para ser trabajada cuando:**
+### Definition of Ready (DoR)
 
-- [ ] Está redactada de forma clara y comprensible (formato Como/Quiero/Para).
-- [ ] Tiene un identificador y un título definidos.
-- [ ] Está alineada con el alcance del MVP y los objetivos del producto.
-- [ ] Su valor de negocio es entendible.
-- [ ] Tiene criterios de aceptación definidos.
-- [ ] Sus dependencias externas están identificadas, si aplica.
-- [ ] Puede ser estimada por el equipo técnico.
-- [ ] Fue revisada y entendida por DEV y QA.
+- La historia de usuario debe estar redactada de forma clara.
+- Deben estar definidos los datos de usuario para registrar el pedido: origen, peso y destino
+- Deben estar claras las reglas de negocio sobre cobertura y peso permitido.
+- Los criterios de aceptación deben estar definidos.
+- La historia debe estar revisada por DEV y QA.
+- La historia debe ser poder estimada por el equipo técnico.
 
-## HU1 - Registrar Pedido
+### HU1 - Registrar Pedido
 
 **Como** usuario del sistema  
 **quiero** registrar un pedido  
