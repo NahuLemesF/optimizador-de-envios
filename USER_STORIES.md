@@ -116,6 +116,15 @@ Escenario: Visualización de alternativas
     Entonces el sistema debe mostrar automáticamente las opciones alternativas disponibles
 ```
 
+```gherkin
+Escenario: Ausencia de opciones alternativas
+    Dado que el sistema generó una recomendación principal
+    Y no existen otras opciones de envío disponibles
+    Cuando el sistema muestra la recomendación principal
+    Entonces el sistema debe notificar que no existen otras opciones alternativas
+```
+
+
 ---
 
 ## HU5 - Seleccionar y confirmar proveedor
