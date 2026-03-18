@@ -132,3 +132,12 @@ Escenario: Ausencia de opciones alternativas
 **Como** usuario del sistema  
 **Quiero** seleccionar el proveedor deseado  
 **Para** continuar con el proceso del pedido
+
+### Criterios de aceptación
+
+```gherkin
+Escenario: Camino Feliz - Selección del proveedor deseado
+	Dado que el sistema mostró la opción recomendada y las opciones disponibles
+	Cuando el usuario seleccione el proveedor deseado
+	Entonces el sistema debe continuar con el proceso de pedido
+```
