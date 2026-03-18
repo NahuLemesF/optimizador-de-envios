@@ -108,6 +108,8 @@ Escenario: Recomendación principal con empate en menor tiempo
 **Quiero** ver otras opciones disponibles  
 **Para** compararlas con la recomendación principal y evaluar la opción más conveniente.
 
+### Criterios de aceptación
+
 ```gherkin
 Escenario: Visualización de alternativas
     Dado que el sistema generó una recomendación principal
@@ -141,3 +143,12 @@ Escenario: Camino Feliz - Selección del proveedor deseado
 	Cuando el usuario seleccione el proveedor deseado
 	Entonces el sistema debe continuar con el proceso de pedido
 ```
+
+```gherkin
+Escenario: Usuario no selecciona proveedor
+	Dado que el sistema mostró la opción recomendada y las opciones disponibles
+	Cuando el usuario intenta continuar sin seleccionar un proveedor
+	Entonces el sistema no debe continuar con el proceso de pedido
+	Y debe informar que se debe seleccionar un proveedor para continuar 
+```
+
