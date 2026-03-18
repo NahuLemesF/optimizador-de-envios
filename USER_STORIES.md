@@ -67,6 +67,8 @@ Escenario: Peso no permitido
 **Para** poder hacer el proceso del cálculo del envío.
 
 ### Valor de Negocio
+- Permite seleccionar la opcion de envio que es de interes para el usuario de acuerdo a sus necesidades
+- Asegura que el sistema tenga la información correcta para generar recomendaciones de envío.
 
 ### Reglas Relacionadas
 
