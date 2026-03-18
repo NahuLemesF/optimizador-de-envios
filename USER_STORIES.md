@@ -8,6 +8,10 @@
 **quiero** registrar un pedido  
 **para** poder hacer el proceso del cálculo del envío.
 
+### Valor de Negocio
+- Permite registrar un pedido con los datos necesarios para calcular el envío.
+- Asegura que el sistema tenga la información correcta para generar recomendaciones de envío.
+- Facilita la validación de datos de entrada para evitar errores en el proceso de cálculo.
 
 ### Definition of Ready (DoR)
 
