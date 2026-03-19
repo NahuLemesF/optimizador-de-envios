@@ -1,19 +1,19 @@
-# Subtasks
-
-## HU-01 | Registrar pedido de envío
-
-### Objetivo de la historia
-Permitirle al usuario agregar pedido para calcular y obtener una recomendación sobre cual proveedor de transporte es más adecuado de acuerdo a sus necesidades
+# Subtasks - Optimizador de Envíos
 
 ---
 
-### Subtareas DEV
+# HU-01 | Registrar pedido de envío
 
-#### Backend
+## Objetivo de la historia
+Permitirle al usuario agregar pedido para calcular y obtener una recomendación sobre cual proveedor de transporte es más adecuado de acuerdo a sus necesidades
+
+## Subtareas DEV
+
+### Backend
 
 **Modelo o entidad**
 
-Definir modelo Pedido:
+Definir modelo **Pedido**:
 - origen (nombre, lat, lon)
 - destino (nombre, lat, lon)
 - peso
@@ -51,9 +51,7 @@ Definir modelo Pedido:
 - Crear pruebas unitarias para validaciones de datos (campos obligatorios, peso)
 - Crear pruebas unitarias de cobertura para las diferentes capas
 
----
-
-#### Frontend
+### Frontend
 
 **Vista**
 - Crear formulario de registro:
@@ -83,6 +81,33 @@ Definir modelo Pedido:
 - Validación de inputs
 - Persistencia del estado del pedido en el estado global
 
+## Subtareas QA
+
+### Análisis funcional
+- Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros, consistentes y testeables.
+- Validar que el flujo de registro del pedido esté alineado con el PRD y el alcance del MVP.
+
+### Diseño de casos de prueba
+- Diseñar casos de prueba para registro exitoso, campos obligatorios vacíos, peso fuera de rango y ubicaciones fuera de Colombia.
+- Diseñar casos de prueba para conversión de unidades de peso a kilogramos.
+- Diseñar casos de prueba para cálculo de distancia entre origen y destino.
+
+### Validación backend
+- Verificar el funcionamiento del endpoint `GET /locations/autocomplete` y del endpoint `POST /pedido`.
+- Validar que el autocomplete retorne únicamente lugares de Colombia.
+- Validar que el sistema normalice correctamente el peso y rechace valores fuera del rango permitido.
+
+### Validación frontend
+- Verificar el formulario de registro con origen, destino, peso y unidad.
+- Validar el funcionamiento del autocompletado y las validaciones de campos obligatorios.
+- Verificar que el estado global almacene correctamente los datos del pedido.
+
+### Pruebas y evidencia
+- Preparar datos de prueba para escenarios válidos, inválidos y de borde.
+- Ejecutar pruebas funcionales del flujo de registro del pedido.
+- Registrar hallazgos y validar el cumplimiento de los criterios de aceptación.
+
+---
 
 ## HU-02 | Definir prioridad del envío
 
