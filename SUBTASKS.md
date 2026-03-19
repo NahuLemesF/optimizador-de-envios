@@ -36,16 +36,16 @@ Permitir al usuario seleccionar el criterio de optimización del envío para el 
 ### Frontend
 
 #### Vista/UI:
-    - Crear pantalla de selección de prioridad con las opciones de `ECONOMICO`, `RAPIDO`.
+- Crear pantalla de selección de prioridad con las opciones de `ECONOMICO`, `RAPIDO`.
 
 #### Lógica del cliente:
-    - Validar que el usuario tenga que seleccionar una opción.
-    - Guardar la prioridad en el estado global.
-    - Manejar errores que envíe el backend.
+- Validar que el usuario tenga que seleccionar una opción.
+- Guardar la prioridad en el estado global.
+- Manejar errores que envíe el backend.
 
 #### Pruebas Unitarias:
-    - Selección de prioridad y validar que sea obligatoria.
-    - Pruebas de cobertura.
+- Selección de prioridad y validar que sea obligatoria.
+- Pruebas de cobertura.
 
 ## Subtareas QA
 
