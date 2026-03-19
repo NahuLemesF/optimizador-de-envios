@@ -35,4 +35,17 @@ Permitir al usuario visualizar opciones alternativas de proveedores de transport
 #### Pruebas
 - Realizar pruebas unitarias y de cobertura.
 
+## Subtareas QA
+
+### Análisis y diseño
+- Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros y testeables.
+- Diseñar casos de prueba para visualización de alternativas y ausencia de alternativas.
+
+### Validación técnica y funcional
+- Verificar que las opciones alternativas se muestren separadas de la recomendación principal.
+- Validar que cada alternativa muestre proveedor, costo y tiempo de entrega.
+- Verificar que la recomendación principal no se repita dentro de la lista de alternativas.
+- Validar la selección de una opción alternativa desde la interfaz.
+- Ejecutar pruebas funcionales y registrar hallazgos.
+
 # HU-05 | Seleccionar y confirmar proveedor
