@@ -76,6 +76,7 @@ Escenario: Peso no permitido
 - Asegura que el sistema tenga la información correcta para generar recomendaciones de envío.
 
 ### Reglas Relacionadas
+- **Regla 4:** El usuario debe seleccionar una prioridad de envío (menor costo o menor tiempo) para que el sistema pueda generar la recomendación.
 
 ### Definition of Ready (DoR)
 
@@ -122,6 +123,15 @@ Escenario: Selección de prioridad por menor tiempo de entrega
 - Proporciona una recomendación personalizada basada en las preferencias del usuario.
 - Facilita la toma de decisiones al destacar la opción más relevante.
 - Mejora la experiencia del usuario al ofrecer una recomendación clara y directa.
+
+### Reglas relacionadas
+- **Regla 5:** Si la prioridad es menor costo, el sistema debe recomendar la opción de menor costo disponible.
+
+- **Regla 6:** Si la prioridad es menor tiempo de entrega, el sistema debe recomendar la opción de menor tiempo disponible.
+
+- **Regla 7:** Si existe empate en el menor costo, el sistema debe recomendar la opción con menor tiempo de entrega entre las empatadas.
+
+- **Regla 8:** Si existe empate en el menor tiempo de entrega, el sistema debe recomendar la opción con menor costo entre las empatadas.
 
 ### Definition of Ready (DoR)
 - La historia de usuario está redactada de forma clara.
@@ -190,6 +200,8 @@ Escenario: Recomendación principal con empate en menor tiempo
 - Permite al usuario tener claridad sobre otras opciones de proveedores de acuerdo a su pedido 
 
 ### Reglas relacionadas
+
+- **Regla 9:** El sistema debe mostrar opciones alternativas distintas a la recomendación principal, incluyendo costo y tiempo de entrega, para permitir la comparación.
 
 ### Definition of Ready (DoR)
 - La historia de usuario está redactada de forma clara.
