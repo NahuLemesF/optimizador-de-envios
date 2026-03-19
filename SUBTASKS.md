@@ -38,6 +38,14 @@ Permitir al usuario seleccionar el criterio de optimización del envío para el 
     - Selección de prioridad y validar que sea obligatoria
     - Pruebas de cobertura
 
+### Subtareas QA
+
+#### Análisis funcional
+- Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros, consistentes y testeables.
+- Validar que el flujo de registro del pedido esté alineado con el PRD y el alcance del MVP.
+- Verificar la coherencia entre origen, destino, peso, unidad de peso, peso normalizado y distancia.
+
+
 ## HU-03 | Obtener recomendación principal de proveedor de envío
 
 ## HU-04 | Obtener opciones alternativas de proveedores
