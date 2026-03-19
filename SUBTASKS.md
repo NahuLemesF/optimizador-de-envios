@@ -1,11 +1,11 @@
 # Subtasks
 
-## HU-01 - Registrar pedido
+## HU-01 | Registrar pedido de envío
 
-## HU-02 - Definir prioridad del envío
+## HU-02 | Definir prioridad del envío
 
-## HU-03 - Obtener recomendación principal
+## HU-03 | Obtener recomendación principal de proveedor de envío
 
-## HU-04 - Consultar opciones alternativas
+## HU-04 | Obtener opciones alternativas de proveedores
 
-## HU-05 - Seleccionar y confirmar proveedor
+## HU-05 | Seleccionar y confirmar proveedor
