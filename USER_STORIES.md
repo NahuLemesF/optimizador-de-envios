@@ -1,6 +1,6 @@
 # Historias de Usuario - Optimizador de Envíos
 
-## HU1 - Registrar Pedido
+## HU-01 - Registrar Pedido
 
 ### Descripción
 
@@ -63,7 +63,7 @@ Escenario: Peso no permitido
 
 ---
 
-## HU2 - Definir prioridad del envío
+## HU-02 - Definir prioridad del envío
 
 ### Descripcion
 
@@ -111,7 +111,7 @@ Escenario: Selección de prioridad por menor tiempo de entrega
 
 ---
 
-## HU3 - Obtener recomendación principal
+## HU-03 - Obtener recomendación principal
 
 ### Descripción
 
@@ -186,7 +186,7 @@ Escenario: Recomendación principal con empate en menor tiempo
 
 ---
 
-## HU4 - Consultar opciones alternativas
+## HU-04 - Consultar opciones alternativas
 
 ### Descripción
 
@@ -237,7 +237,7 @@ Escenario: Ausencia de opciones alternativas
 
 ---
 
-## HU5 - Seleccionar y confirmar proveedor
+## HU-05 - Seleccionar y confirmar proveedor
 
 ### Descripción
 
