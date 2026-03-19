@@ -5,8 +5,8 @@
 ### Descripción
 
 **Como** usuario del sistema  
-**quiero** registrar un pedido  
-**para** poder hacer el proceso del cálculo del envío.
+**Quiero** registrar un pedido  
+**Para** poder hacer el proceso del cálculo del envío.
 
 ### Valor de Negocio
 - Permite registrar un pedido con los datos necesarios para calcular el envío.
@@ -75,7 +75,7 @@ Escenario: Peso no permitido
 ### Definition of Ready (DoR)
 
 - La historia de usuario está redactada de forma clara.
-- Están definidas las opciones de envio que se tendran en cuenta; economico o rapido
+- Están definidas las opciones de envío que se tendran en cuenta; económico o rápido
 - Los criterios de aceptación están definidos.
 - La historia está revisada por DEV y QA.
 - La historia puede ser estimada por el equipo técnico.
@@ -97,11 +97,11 @@ Escenario: Selección de prioridad por menor tiempo de entrega
 ```
 
 ### Definition of Done (DoD)
-- La funcionalidad de elegir entre los dos tipos de envio esta implementada
-- El sistema permite elegir entre envio con opcion economica o rapida
-- El sistema no permite hacer el calculo para la recomendacion sin antes haber elegido una de las opciones de envio
-- Se cumplen los criterios de aceptacion definidos
-- La historia fue validada por QA
+- La funcionalidad de elegir la prioridad del envío está implementada.
+- El sistema permite elegir entre las opciones de envío económico o rápido.
+- El sistema no permite hacer el cálculo para la recomendación sin antes haber elegido una de las opciones de envío.
+- Se cumplen los criterios de aceptación definidos.
+- La historia fue validada por QA.
 
 ---
 
@@ -181,15 +181,15 @@ Escenario: Recomendación principal con empate en menor tiempo
 
 ### Valor de negocio
 - Permite al usuario tener control todo el tiempo sobre la decisión de que proveedor usar.
-- La herramienta le da la recomendación de acuerdo a las necesidades del cliente, pero el cliente puede ver las demas opciones
+- La herramienta no solo se limita a recomendar una opción, sino que también ofrece transparencia al mostrar otras alternativas disponibles.
 - Permite al usuario tener claridad sobre otras opciones de proveedores de acuerdo a su pedido 
 
 ### Reglas relacionadas
 
 ### Definition of Ready (DoR)
 - La historia de usuario está redactada de forma clara.
-- Están definidas las reglas de negocio para generar las opciones de proveedores alternativas teniendo en cuenta las opciones de economico o rapido.
-- Estan definidas las reglas de negocio relacionadas con los proveedores (peso y cobertura)
+- Están definidas las reglas de negocio para generar las opciones de proveedores alternativas teniendo en cuenta las opciones de económico o rápido.
+- Están definidas las reglas de negocio relacionadas con los proveedores (peso y cobertura).
 - Los criterios de aceptación están definidos.
 - La historia está revisada por DEV y QA.
 - La historia puede ser estimada por el equipo técnico.
@@ -213,11 +213,10 @@ Escenario: Ausencia de opciones alternativas
 ```
 
 ### Definition of Done (DoD)
-- La funcionalidad de generar las opciones alternativas de proveedores esta implementada
-- El sistema devuelve las opciones alternativas si el caso se cumple para generarlas
+- La funcionalidad de generar las opciones alternativas de proveedores está implementada.
+- El sistema devuelve las opciones alternativas si el caso se cumple para generarlas.
 - Se cumplen los criterios de aceptación definidos.
 - La historia fue validada por QA.
-
 
 ---
 
@@ -265,5 +264,6 @@ Escenario: Usuario no selecciona proveedor
 - Se cumplen los criterios de aceptación definidos.
 - La historia fue validada por QA.
 
+---
 
-Este proyecto fue creado por **Nahuel Lemes** y **Santiago Angarita**.
+Autores: **Nahuel Lemes** y **Santiago Angarita**.
