@@ -103,7 +103,7 @@ Escenario: Selección de prioridad por menor tiempo de entrega
 - Se cumplen los criterios de aceptacion definidos
 - La historia fue validada por QA
 
-
+---
 
 ## HU3 - Obtener recomendación principal
 
@@ -161,6 +161,13 @@ Escenario: Recomendación principal con empate en menor tiempo
     Entonces el sistema debe devolver una opción recomendada
     Y la opción recomendada debe corresponder a la de menor costo
 ```
+
+### Definition of Done (DoD)
+- La funcionalidad de generar una recomendación principal está implementada.
+- El sistema devuelve la opción recomendada de acuerdo a la prioridad seleccionada por el usuario.
+- El sistema maneja correctamente los casos de empate en costo o tiempo.
+- Se cumplen los criterios de aceptación definidos.
+- La historia fue validada por QA.
 
 ---
 
