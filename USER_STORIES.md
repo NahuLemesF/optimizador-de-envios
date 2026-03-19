@@ -213,6 +213,10 @@ Escenario: Ausencia de opciones alternativas
 ```
 
 ### Definition of Done (DoD)
+- La funcionalidad de generar las opciones alternativas de proveedores esta implementada
+- El sistema devuelve las opciones alternativas si el caso se cumple para generarlas
+- Se cumplen los criterios de aceptación definidos.
+- La historia fue validada por QA.
 
 
 ---
