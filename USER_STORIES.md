@@ -239,6 +239,8 @@ Escenario: Ausencia de opciones alternativas
 
 ## HU5 - Seleccionar y confirmar proveedor
 
+### Descripción
+
 **Como** usuario del sistema  
 **Quiero** seleccionar el proveedor deseado  
 **Para** continuar con el proceso del pedido
@@ -248,6 +250,8 @@ Escenario: Ausencia de opciones alternativas
 - Mejora la experiencia del usuario al permitirle confirmar su elección de proveedor.
 
 ### Reglas relacionadas
+
+- **Regla 10:** El usuario debe seleccionar un proveedor para poder continuar con el proceso del pedido.
 
 ### Definition of Ready (DoR)
 - La historia de usuario está redactada de forma clara.
