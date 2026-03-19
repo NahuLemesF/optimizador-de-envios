@@ -74,3 +74,32 @@ Permitir al usuario seleccionar un proveedor de envío y confirmar su selección
 - Pruebas unitarias
 - Pruebas de integración
 
+---
+
+#### Frontend
+
+**Vista / UI**
+- En la pantalla de selección de la opción debe haber un botón para seleccionarlo
+
+---
+
+**Lógica**
+- Consumir endpoint POST /pedidos/confirmar enviando:
+  - proveedor seleccionado
+  - origen
+  - destino
+  - peso
+  - distancia
+  - prioridad
+
+---
+
+**Navegación**
+- Si la operación es exitosa, redirigir a pantalla de confirmación con el responseDTO
+
+---
+
+**Pruebas y manejo de errores**
+- Manejar errores enviados por el backend
+- Pruebas unitarias
+- Pruebas de cobertura
