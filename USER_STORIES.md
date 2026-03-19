@@ -158,9 +158,20 @@ Escenario: Recomendación principal con empate en menor tiempo
 
 ## HU4 - Consultar opciones alternativas
 
+### Descripción
+
 **Como** usuario del sistema  
 **Quiero** ver otras opciones disponibles  
 **Para** compararlas con la recomendación principal y evaluar la opción más conveniente.
+
+### Valor de negocio
+- Permite al usuario tener control todo el tiempo sobre la decisión de que proveedor usar.
+- La herramienta le da la recomendación de acuerdo a las necesidades del cliente, pero el cliente puede ver las demas opciones
+- Permite al usuario tener claridad sobre otras opciones de proveedores de acuerdo a su pedido 
+
+### Reglas relacionadas
+
+### Definition of Ready (DoR)
 
 ### Criterios de aceptación
 
@@ -179,6 +190,8 @@ Escenario: Ausencia de opciones alternativas
     Cuando el sistema muestra la recomendación principal
     Entonces el sistema debe notificar que no existen otras opciones alternativas
 ```
+
+### Definition of Done (DoD)
 
 
 ---
