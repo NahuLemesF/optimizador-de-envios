@@ -21,6 +21,37 @@ Definir modelo Pedido:
 - pesoEnKg
 - distancia (km)
 
+**DTO’s**
+- PedidoRequest con origen, destino, peso y unidadPeso
+- PedidoResponse con los mismos datos 
+- LocationResponse con nombre para tener en lista el origen y el destino con su lat y lon
+
+**Regla o servicio de dominio**
+- Validar campos obligatorios (usando DTO o dominio)
+- Mapear PedidoRequest → Pedido
+- Implementar conversión de unidades a Kg
+- Normalizar peso a pesoEnKg
+- Validar rango permitido (0.001 - 70 Kg)
+- Validar que la API unicamente traiga lugares de Colombia
+- Orquestar cálculo de distancia usando servicio externo
+- Mapear Pedido → PedidoResponse
+
+**Integracion Externa (OpenRouteService)**
+- Crear metodo de autocomplete que retorne los diferentes lugares de acuerdo al texto puesto por el cliente para tener nombre, lat y lon
+- Crear metodo getDistance para determinar la distancia que existe entre origen y destino
+
+**Persistencia**
+- Manejo en memoria
+
+**Endpoint o caso de uso**
+- Crear endpoint GET /locations/autocomplete para retornar la lista de las locaciones encontradas por la API
+- Crear endpoint POST /pedido donde se recibe el requestDTO y retorna el responseDTO
+
+**Pruebas unitarias técnicas**
+- Crear pruebas unitarias para validaciones de datos (campos obligatorios, peso)
+- Crear pruebas unitarias de cobertura para las diferentes capas
+
+
 ## HU-02 | Definir prioridad del envío
 
 ## HU-03 | Obtener recomendación principal de proveedor de envío
