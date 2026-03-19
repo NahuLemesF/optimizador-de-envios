@@ -51,6 +51,38 @@ Definir modelo Pedido:
 - Crear pruebas unitarias para validaciones de datos (campos obligatorios, peso)
 - Crear pruebas unitarias de cobertura para las diferentes capas
 
+---
+
+#### Frontend
+
+**Vista**
+- Crear formulario de registro:
+  - Input origen
+  - Input destino
+  - Input peso
+  - Selector de unidad (g, kg, lb)
+
+**Logica de cliente**
+- Implementar autocompletado:
+  - Llamar al endpoint de autocomplete (usando debounce)
+  - Mostrar sugerencias
+  - Guardar selección
+  - Debe funcionar para origen y destino
+
+- Validar campos obligatorios y el formato del peso (numérico)
+
+- Consumir endpoint POST para guardar el pedido en estado Global
+
+- El estado global debe guardar:
+  - origen
+  - destino
+  - pesoKg
+  - distancia
+
+**Pruebas Unitarias**
+- Validación de inputs
+- Persistencia del estado del pedido en el estado global
+
 
 ## HU-02 | Definir prioridad del envío
 
