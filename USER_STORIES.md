@@ -258,3 +258,12 @@ Escenario: Usuario no selecciona proveedor
 	Y debe informar que se debe seleccionar un proveedor para continuar 
 ```
 
+### Definition of Done (DoD)
+- La funcionalidad de selección y confirmación del proveedor está implementada.
+- El sistema permite seleccionar un proveedor de las opciones disponibles.
+- El sistema bloquea el proceso de pedido si no se ha seleccionado un proveedor.
+- Se cumplen los criterios de aceptación definidos.
+- La historia fue validada por QA.
+
+
+Este proyecto fue creado por **Nahuel Lemes** y **Santiago Angarita**.
