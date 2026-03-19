@@ -76,6 +76,7 @@ Escenario: Peso no permitido
 - Asegura que el sistema tenga la información correcta para generar recomendaciones de envío.
 
 ### Reglas Relacionadas
+- **Regla 4:** El usuario debe seleccionar una prioridad de envío (menor costo o menor tiempo) para que el sistema pueda generar la recomendación.
 
 ### Definition of Ready (DoR)
 
