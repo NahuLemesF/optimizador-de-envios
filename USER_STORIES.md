@@ -67,7 +67,7 @@ Escenario: Peso no permitido
 **Para** poder hacer el proceso del cálculo del envío.
 
 ### Valor de Negocio
-- Permite seleccionar la opcion de envio que es de interes para el usuario de acuerdo a sus necesidades
+- Permite seleccionar la opción de envío que es de interés para el usuario de acuerdo a sus necesidades
 - Asegura que el sistema tenga la información correcta para generar recomendaciones de envío.
 
 ### Reglas Relacionadas
@@ -107,9 +107,16 @@ Escenario: Selección de prioridad por menor tiempo de entrega
 
 ## HU3 - Obtener recomendación principal
 
+### Descripción
+
 **Como** usuario del sistema  
 **Quiero** que el sistema me recomiende la mejor opción de envío  
 **Para** elegir una alternativa que cumpla con mis necesidades
+
+### Valor de Negocio
+- Proporciona una recomendación personalizada basada en las preferencias del usuario.
+- Facilita la toma de decisiones al destacar la opción más relevante.
+- Mejora la experiencia del usuario al ofrecer una recomendación clara y directa.
 
 ### Criterios de Aceptación
 
