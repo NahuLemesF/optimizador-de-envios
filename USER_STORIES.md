@@ -13,6 +13,11 @@
 - Asegura que el sistema tenga la información correcta para generar recomendaciones de envío.
 - Facilita la validación de datos de entrada para evitar errores en el proceso de cálculo.
 
+### Reglas relacionadas
+- **Regla 1:** El sistema solo debe operar para envíos cuyo origen y destino estén dentro de Colombia.
+- **Regla 2:** El usuario debe ingresar obligatoriamente origen, destino y peso del paquete.
+- **Regla 3:** El sistema no debe permitir calcular opciones si el paquete no esta en los límites de peso (0,001 Kg - 70 Kg)
+
 ### Definition of Ready (DoR)
 
 - La historia de usuario está redactada de forma clara.

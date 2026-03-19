@@ -24,17 +24,17 @@ Construir una herramienta logística que automatice la selección del proveedor 
 
 ## Reglas de Negocio Generales
 
-- El sistema **solo debe operar** para envíos dentro de **Colombia**
+- **Regla 1:** El sistema **solo debe operar** para envíos dentro de **Colombia**
 
-- Para calcular una cotización, el usuario debe ingresar **obligatoriamente origen, destino y peso del paquete**.
-- El sistema no debe permitir calcular opciones si el paquete supera los límites admitidos por los proveedores disponibles; **el peso debe ser mayor o igual a 0,001 Kg y menor o igual a 70 Kg**.
-- El usuario debe seleccionar una prioridad de envío (menor costo o menor tiempo) para que el sistema pueda generar la recomendación.
-- Si la **prioridad es menor costo**, el **sistema** debe **recomendar la opción de menor costo** disponible.
-- Si la **prioridad es menor tiempo de entrega**, el sistema **debe recomendar la opción de menor tiempo** disponible.
-- Si **existe empate en el menor costo**, el sistema debe **recomendar la opción con menor tiempo de entrega** entre las empatadas.
-- Si **existe empate en el menor tiempo de entrega**, el sistema debe **recomendar la opción con menor costo** entre las empatadas.
-- El sistema debe **mostrar opciones alternativas** distintas a la recomendación principal para permitir la comparación si se da el caso.
-- El usuario debe **seleccionar un proveedor** para poder continuar con el proceso del pedido.
+- **Regla 2:** Para calcular una cotización, el usuario debe ingresar **obligatoriamente origen, destino y peso del paquete**.
+- **Regla 3:** El sistema no debe permitir calcular opciones si el paquete supera los límites admitidos por los proveedores disponibles; **el peso debe ser mayor o igual a 0,001 Kg y menor o igual a 70 Kg**.
+- **Regla 4:** El usuario debe seleccionar una prioridad de envío (menor costo o menor tiempo) para que el sistema pueda generar la recomendación.
+- **Regla 5:** Si la **prioridad es menor costo**, el **sistema** debe **recomendar la opción de menor costo** disponible.
+- **Regla 6:** Si la **prioridad es menor tiempo de entrega**, el sistema **debe recomendar la opción de menor tiempo** disponible.
+- **Regla 7:** Si **existe empate en el menor costo**, el sistema debe **recomendar la opción con menor tiempo de entrega** entre las empatadas.
+- **Regla 8:** Si **existe empate en el menor tiempo de entrega**, el sistema debe **recomendar la opción con menor costo** entre las empatadas.
+- **Regla 9:** El sistema debe **mostrar opciones alternativas** distintas a la recomendación principal para permitir la comparación si se da el caso.
+- **Regla 10:** El usuario debe **seleccionar un proveedor** para poder continuar con el proceso del pedido.
 
 
 ## Alcance del MVP
