@@ -233,6 +233,14 @@ Escenario: Ausencia de opciones alternativas
 
 ### Reglas relacionadas
 
+### Definition of Ready (DoR)
+- La historia de usuario está redactada de forma clara.
+- Están definidas las reglas de negocio para la selección y confirmación del proveedor.
+- Está definida la regla de negocio para continuar o bloquear el proceso de selección de proveedor.
+- Los criterios de aceptación están definidos.
+- La historia está revisada por DEV y QA.
+- La historia puede ser estimada por el equipo técnico.
+
 ### Criterios de aceptación
 
 ```gherkin
