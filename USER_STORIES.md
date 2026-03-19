@@ -118,6 +118,14 @@ Escenario: Selección de prioridad por menor tiempo de entrega
 - Facilita la toma de decisiones al destacar la opción más relevante.
 - Mejora la experiencia del usuario al ofrecer una recomendación clara y directa.
 
+### Definition of Ready (DoR)
+- La historia de usuario está redactada de forma clara.
+- Estan definidas las prioridades de envío disponibles: menor costo y menor tiempo de entrega.
+- Están definidas las reglas de negocio para generar la recomendación principal.
+- Los criterios de aceptación están definidos.
+- La historia está revisada por DEV y QA.
+- La historia puede ser estimada por el equipo técnico.
+
 ### Criterios de Aceptación
 
 ```gherkin
