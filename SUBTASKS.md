@@ -93,6 +93,21 @@ Permitir al usuario obtener la mejor opción de envío según la prioridad selec
 #### Navegación
 - Agregar botón para seleccionar el proveedor de la opción recomendada.
 
+### Subtareas QA
+
+#### Análisis funcional
+- Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros, consistentes y testeables.
+- Validar que la lógica de recomendación esté alineada con el PRD, el alcance del MVP y la prioridad seleccionada por el usuario.
+- Verificar la coherencia entre pedido, cotización, recomendación principal y opciones alternativas.
+
+#### Diseño de casos de prueba
+- Diseñar casos de prueba para recomendación principal por menor costo.
+- Diseñar casos de prueba para recomendación principal por menor tiempo de entrega.
+- Diseñar casos de prueba para empate en menor costo.
+- Diseñar casos de prueba para empate en menor tiempo de entrega.
+- Diseñar casos de prueba para escenarios con múltiples proveedores disponibles.
+- Diseñar casos de prueba para escenarios donde solo exista una opción válida.
+
 ## HU-04 | Obtener opciones alternativas de proveedores
 
 ## HU-05 | Seleccionar y confirmar proveedor
