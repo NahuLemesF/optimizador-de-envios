@@ -10,104 +10,33 @@ Permitirle al usuario agregar pedido para calcular y obtener una recomendación 
 ## Subtareas DEV
 
 ### Backend
-
-**Modelo o entidad**
-
-Definir modelo **Pedido**:
-- origen (nombre, lat, lon)
-- destino (nombre, lat, lon)
-- peso
-- unidadPeso como enum (GRAMOS, KILOGRAMOS, LIBRAS)
-- pesoEnKg
-- distancia (km)
-
-**DTO’s**
-- PedidoRequest con origen, destino, peso y unidadPeso
-- PedidoResponse con los mismos datos 
-- LocationResponse con nombre para tener en lista el origen y el destino con su lat y lon
-
-**Regla o servicio de dominio**
-- Validar campos obligatorios (usando DTO o dominio)
-- Mapear PedidoRequest → Pedido
-- Implementar conversión de unidades a Kg
-- Normalizar peso a pesoEnKg
-- Validar rango permitido (0.001 - 70 Kg)
-- Validar que la API unicamente traiga lugares de Colombia
-- Orquestar cálculo de distancia usando servicio externo
-- Mapear Pedido → PedidoResponse
-
-**Integracion Externa (OpenRouteService)**
-- Crear metodo de autocomplete que retorne los diferentes lugares de acuerdo al texto puesto por el cliente para tener nombre, lat y lon
-- Crear metodo getDistance para determinar la distancia que existe entre origen y destino
-
-**Persistencia**
-- Manejo en memoria
-
-**Endpoint o caso de uso**
-- Crear endpoint GET /locations/autocomplete para retornar la lista de las locaciones encontradas por la API
-- Crear endpoint POST /pedido donde se recibe el requestDTO y retorna el responseDTO
-
-**Pruebas unitarias técnicas**
-- Crear pruebas unitarias para validaciones de datos (campos obligatorios, peso)
-- Crear pruebas unitarias de cobertura para las diferentes capas
+- Definir el modelo Pedido y los DTOs necesarios para el registro del envío.
+- Implementar validaciones de campos obligatorios, rango de peso y cobertura en Colombia.
+- Implementar conversión de unidades de peso y normalización a kilogramos.
+- Integrar el servicio externo para autocompletado de ubicaciones y cálculo de distancia.
+- Implementar endpoints GET /locations/autocomplete y POST /pedido.
+- Realizar pruebas unitarias y de cobertura para las capas del backend.
 
 ### Frontend
-
-**Vista**
-- Crear formulario de registro:
-  - Input origen
-  - Input destino
-  - Input peso
-  - Selector de unidad (g, kg, lb)
-
-**Logica de cliente**
-- Implementar autocompletado:
-  - Llamar al endpoint de autocomplete (usando debounce)
-  - Mostrar sugerencias
-  - Guardar selección
-  - Debe funcionar para origen y destino
-
-- Validar campos obligatorios y el formato del peso (numérico)
-
-- Consumir endpoint POST para guardar el pedido en estado Global
-
-- El estado global debe guardar:
-  - origen
-  - destino
-  - pesoKg
-  - distancia
-
-**Pruebas Unitarias**
-- Validación de inputs
-- Persistencia del estado del pedido en el estado global
+- Implementar formulario de registro con origen, destino, peso y unidad.
+- Implementar autocompletado para origen y destino consumiendo el endpoint correspondiente.
+- Validar campos obligatorios y formato del peso.
+- Consumir endpoint POST /pedido y almacenar la información en el estado global.
+- Permitir la navegación al siguiente paso del flujo.
+- Realizar pruebas unitarias y de cobertura.
 
 ## Subtareas QA
 
-### Análisis funcional
-- Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros, consistentes y testeables.
-- Validar que el flujo de registro del pedido esté alineado con el PRD y el alcance del MVP.
+### Análisis y diseño
+- Revisar que la HU, reglas de negocio y criterios de aceptación sean claros y testeables.
+- Diseñar casos de prueba para registro exitoso, validación de campos, peso fuera de rango y cobertura geográfica.
 
-### Diseño de casos de prueba
-- Diseñar casos de prueba para registro exitoso, campos obligatorios vacíos, peso fuera de rango y ubicaciones fuera de Colombia.
-- Diseñar casos de prueba para conversión de unidades de peso a kilogramos.
-- Diseñar casos de prueba para cálculo de distancia entre origen y destino.
-
-### Validación backend
-- Verificar el funcionamiento del endpoint `GET /locations/autocomplete` y del endpoint `POST /pedido`.
-- Validar que el autocomplete retorne únicamente lugares de Colombia.
-- Validar que el sistema normalice correctamente el peso y rechace valores fuera del rango permitido.
-
-### Validación frontend
-- Verificar el formulario de registro con origen, destino, peso y unidad.
-- Validar el funcionamiento del autocompletado y las validaciones de campos obligatorios.
-- Verificar que el estado global almacene correctamente los datos del pedido.
-
-### Pruebas y evidencia
-- Preparar datos de prueba para escenarios válidos, inválidos y de borde.
-- Ejecutar pruebas funcionales del flujo de registro del pedido.
-- Registrar hallazgos y validar el cumplimiento de los criterios de aceptación.
-
----
+### Validación técnica y funcional
+- Verificar el funcionamiento de los endpoints GET /locations/autocomplete y POST /pedido.
+- Validar el autocompletado y la restricción de ubicaciones dentro de Colombia.
+- Verificar la conversión de unidades y cálculo de distancia.
+- Validar el flujo completo desde frontend, incluyendo almacenamiento en estado global.
+- Ejecutar pruebas funcionales y registrar hallazgos.
 
 ## HU-02 | Definir prioridad del envío
 
