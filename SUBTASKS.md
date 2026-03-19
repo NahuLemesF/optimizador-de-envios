@@ -1,10 +1,5 @@
 # Subtasks - Optimizador de Envíos
 
-<<<<<<< HEAD
-# HU-01 | Registrar pedido de envío
-
-# HU-02 | Definir prioridad del envío
-=======
 ---
 
 # HU-01 | Registrar pedido de envío
@@ -78,7 +73,6 @@ Permitir al usuario seleccionar el criterio de optimización del envío para que
 - Verificar la selección de prioridad en frontend y su almacenamiento en el estado global.
 - Validar el flujo completo de selección de prioridad y manejo de errores.
 - Ejecutar pruebas funcionales y registrar hallazgos.
->>>>>>> main
 
 # HU-03 | Obtener recomendación principal de proveedor de envío
 
