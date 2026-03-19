@@ -201,6 +201,8 @@ Escenario: Recomendación principal con empate en menor tiempo
 
 ### Reglas relacionadas
 
+- **Regla 9:** El sistema debe mostrar opciones alternativas distintas a la recomendación principal, incluyendo costo y tiempo de entrega, para permitir la comparación.
+
 ### Definition of Ready (DoR)
 - La historia de usuario está redactada de forma clara.
 - Están definidas las reglas de negocio para generar las opciones de proveedores alternativas teniendo en cuenta las opciones de económico o rápido.
