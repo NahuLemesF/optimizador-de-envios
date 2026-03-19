@@ -187,6 +187,12 @@ Escenario: Recomendación principal con empate en menor tiempo
 ### Reglas relacionadas
 
 ### Definition of Ready (DoR)
+- La historia de usuario está redactada de forma clara.
+- Están definidas las reglas de negocio para generar las opciones de proveedores alternativas teniendo en cuenta las opciones de economico o rapido.
+- Estan definidas las reglas de negocio relacionadas con los proveedores (peso y cobertura)
+- Los criterios de aceptación están definidos.
+- La historia está revisada por DEV y QA.
+- La historia puede ser estimada por el equipo técnico.
 
 ### Criterios de aceptación
 
