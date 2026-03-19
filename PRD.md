@@ -24,8 +24,7 @@ Construir una herramienta logística que automatice la selección del proveedor 
 
 ## Reglas de Negocio Generales
 
-- **Regla 1:** El sistema **solo debe operar** para envíos dentro de **Colombia**
-
+- **Regla 1:** El sistema **solo debe operar** para envíos dentro de **Colombia**.
 - **Regla 2:** Para calcular una cotización, el usuario debe ingresar **obligatoriamente origen, destino y peso del paquete**.
 - **Regla 3:** El sistema no debe permitir calcular opciones si el paquete supera los límites admitidos por los proveedores disponibles; **el peso debe ser mayor o igual a 0,001 Kg y menor o igual a 70 Kg**.
 - **Regla 4:** El usuario debe seleccionar una prioridad de envío (menor costo o menor tiempo) para que el sistema pueda generar la recomendación.
@@ -57,6 +56,7 @@ Construir una herramienta logística que automatice la selección del proveedor 
 ---
 
 ## Riesgos de negocio y técnicos
+
 ### Negocio
 
 - **Pérdidas financieras por fallos de lógica:**  
