@@ -124,6 +124,15 @@ Escenario: Selección de prioridad por menor tiempo de entrega
 - Facilita la toma de decisiones al destacar la opción más relevante.
 - Mejora la experiencia del usuario al ofrecer una recomendación clara y directa.
 
+### Reglas relacionadas
+- **Regla 5:** Si la prioridad es menor costo, el sistema debe recomendar la opción de menor costo disponible.
+
+- **Regla 6:** Si la prioridad es menor tiempo de entrega, el sistema debe recomendar la opción de menor tiempo disponible.
+
+- **Regla 7:** Si existe empate en el menor costo, el sistema debe recomendar la opción con menor tiempo de entrega entre las empatadas.
+
+- **Regla 8:** Si existe empate en el menor tiempo de entrega, el sistema debe recomendar la opción con menor costo entre las empatadas.
+
 ### Definition of Ready (DoR)
 - La historia de usuario está redactada de forma clara.
 - Estan definidas las prioridades de envío disponibles: menor costo y menor tiempo de entrega.
