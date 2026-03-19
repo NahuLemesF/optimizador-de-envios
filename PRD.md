@@ -34,7 +34,9 @@ Construir una herramienta logística que automatice la selección del proveedor 
 - **Regla 8:** Si **existe empate en el menor tiempo de entrega**, el sistema debe **recomendar la opción con menor costo** entre las empatadas.
 - **Regla 9:** El sistema debe **mostrar opciones alternativas** distintas a la recomendación principal para permitir la comparación si se da el caso.
 - **Regla 10:** El usuario debe **seleccionar un proveedor** para poder continuar con el proceso del pedido.
+- **Regla 11:** El sistema debe **persistir la información del pedido** cuando el usuario seleccione y confirme un proveedor para continuar con el proceso.
 
+---
 
 ## Alcance del MVP
 

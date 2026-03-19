@@ -252,11 +252,13 @@ Escenario: Ausencia de opciones alternativas
 ### Reglas relacionadas
 
 - **Regla 10:** El usuario debe seleccionar un proveedor para poder continuar con el proceso del pedido.
+- **Regla 11:** El sistema debe persistir la información del pedido cuando el usuario seleccione y confirme un proveedor para continuar con el proceso.
 
 ### Definition of Ready (DoR)
 - La historia de usuario está redactada de forma clara.
 - Están definidas las reglas de negocio para la selección y confirmación del proveedor.
 - Está definida la regla de negocio para continuar o bloquear el proceso de selección de proveedor.
+- Está definida la regla de negocio para persistir la información del pedido al seleccionar un proveedor.
 - Los criterios de aceptación están definidos.
 - La historia está revisada por DEV y QA.
 - La historia puede ser estimada por el equipo técnico.
@@ -282,6 +284,7 @@ Escenario: Usuario no selecciona proveedor
 - La funcionalidad de selección y confirmación del proveedor está implementada.
 - El sistema permite seleccionar un proveedor de las opciones disponibles.
 - El sistema bloquea el proceso de pedido si no se ha seleccionado un proveedor.
+- El sistema persiste la información del pedido al seleccionar y confirmar un proveedor.
 - Se cumplen los criterios de aceptación definidos.
 - La historia fue validada por QA.
 
