@@ -95,6 +95,25 @@ Permitir al usuario obtener la mejor opcion de envio segun la prioridad seleccio
 - Realizar pruebas de cobertura
 - Realizar pruebas de integracion para verificar el correcto funcionamiento entre capas
 
+---
+
+#### Frontend
+
+**Vista / UI**
+- Pantalla de resultados con la recomendacion principal destacada
+
+---
+
+**Logica del cliente**
+- Consumir POST /recomendacion
+- Enviar datos del pedido que estan en el estado global
+
+---
+
+**Navegación**
+- Boton para seleccionar proveedor de la opcion recomendada
+
+---
 
 ## HU-04 | Obtener opciones alternativas de proveedores
 
