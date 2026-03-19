@@ -9,7 +9,7 @@ Permitir al usuario seleccionar el criterio de optimización del envío para el 
 
 ### Subtareas DEV
 
-**Backend**
+#### Backend
 - **Modelo:**
     - Extender en el modelo Pedido para ahora tener el atributo prioridad, que puede ser (ECONOMICO, RAPIDO)
 - **DTO’s:**
@@ -26,7 +26,17 @@ Permitir al usuario seleccionar el criterio de optimización del envío para el 
     - Validación de que se tenga que elegir obligatoriamente una de las prioridades
     - Crear pruebas unitarias para alcanzar cobertura
 
+#### Frontend
 
+- **Vista/UI:**
+    - Crear pantalla de selección de prioridad con las opciones de “ECONOMICO, RAPIDO”
+- **Lógica del cliente:**
+    - Validar que el usuario tenga que seleccionar una opción
+    - Guardar la prioridad en el estado global
+    - Manejar errores que envíe el backend
+- **Pruebas Unitarias:**
+    - Selección de prioridad y validar que sea obligatoria
+    - Pruebas de cobertura
 
 ## HU-03 | Obtener recomendación principal de proveedor de envío
 
