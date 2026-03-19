@@ -227,6 +227,12 @@ Escenario: Ausencia de opciones alternativas
 **Quiero** seleccionar el proveedor deseado  
 **Para** continuar con el proceso del pedido
 
+### Valor de Negocio
+- Facilita la toma de decisiones al ofrecer una selección clara entre las opciones disponibles.
+- Mejora la experiencia del usuario al permitirle confirmar su elección de proveedor.
+
+### Reglas relacionadas
+
 ### Criterios de aceptación
 
 ```gherkin
