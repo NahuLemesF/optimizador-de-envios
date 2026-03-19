@@ -45,6 +45,17 @@ Permitir al usuario seleccionar el criterio de optimización del envío para el 
 - Validar que el flujo de registro del pedido esté alineado con el PRD y el alcance del MVP.
 - Verificar la coherencia entre origen, destino, peso, unidad de peso, peso normalizado y distancia.
 
+#### Diseño de casos de prueba
+- Diseñar casos de prueba para registro exitoso de pedido con datos válidos.
+- Diseñar casos de prueba para campos obligatorios vacíos o incompletos.
+- Diseñar casos de prueba para peso fuera de rango:
+  - menor a 0.001 Kg
+  - mayor a 70 Kg
+- Diseñar casos de prueba para origen y destino dentro de Colombia.
+- Diseñar casos de prueba para intento de selección de ubicaciones fuera de Colombia.
+- Diseñar casos de prueba para cálculo de distancia entre origen y destino.
+
+---
 
 ## HU-03 | Obtener recomendación principal de proveedor de envío
 
