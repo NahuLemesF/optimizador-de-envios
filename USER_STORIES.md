@@ -77,7 +77,7 @@ Escenario: Peso fuera del mínimo permitido
 
 **Como** usuario del sistema  
 **Quiero** seleccionar si prefiero un envío económico o más rápido  
-**Para** poder hacer el proceso del cálculo del envío.
+**Para** que el sistema realice una recomendación según mi preferencia.
 
 ### Valor de Negocio
 - Permite seleccionar la opción de envío que es de interés para el usuario de acuerdo a sus necesidades
@@ -108,6 +108,14 @@ Escenario: Selección de prioridad por menor tiempo de entrega
     Dado que el usuario registró un pedido válido
     Cuando selecciona prioridad de menor tiempo de entrega
     Entonces el sistema debe utilizar el tiempo de entrega como criterio para generar la recomendación
+```
+
+```gherkin
+Escenario: No selección de prioridad
+    Dado que el usuario registró un pedido válido
+    Cuando no selecciona ninguna prioridad de envío
+    Entonces el sistema no debe permitir continuar con el cálculo del envío
+    Y debe informar que se debe seleccionar una prioridad de envío
 ```
 
 ### Definition of Done (DoD)
