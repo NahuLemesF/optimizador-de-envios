@@ -27,7 +27,7 @@ Construir una herramienta logística que automatice la selección del proveedor 
 
 ---
 
-## Reglas de Negocio Generales
+## 3. Reglas de Negocio Generales
 
 - **Regla 1:** El sistema **solo debe operar** para envíos dentro de **Colombia**.
 - **Regla 2:** Para calcular una cotización, el usuario debe ingresar **obligatoriamente origen, destino y peso del paquete**.
@@ -43,9 +43,9 @@ Construir una herramienta logística que automatice la selección del proveedor 
 
 ---
 
-## Alcance del MVP
+## 4. Alcance del MVP
 
-### In
+### 4.1 In Scope
 - **Registro de datos del envío:** el sistema permite ingresar origen, destino y peso del pedido.
 - **Selector de prioridad del envío**: el sistema permite elegir si se desea priorizar **menor costo** o **menor tiempo de entrega**.
 - **Motor de evaluación centralizado:** el sistema compara las opciones de transporte disponibles (*FedEx*, *DHL* y *proveedores locales*) y evalúa considerando costo y tiempo estimado.
@@ -53,7 +53,7 @@ Construir una herramienta logística que automatice la selección del proveedor 
 - **Visualización de opciones alternativas:** el sistema muestra otras opciones disponibles para que el usuario pueda compararlas con la recomendación principal.
 - **Selección de proveedor:** el usuario puede elegir una de las opciones disponibles para continuar con el proceso del pedido.
 
-### Out
+### 4.2 Out of Scope
 - **Gestión de usuarios y perfiles.**
 - **Integración en tiempo real con APIs de proveedores logísticos.**
 - **Módulo de pagos.**
@@ -62,20 +62,17 @@ Construir una herramienta logística que automatice la selección del proveedor 
 
 ---
 
-## Riesgos de negocio y técnicos
+## 5. Riesgos técnicos y de negocio
 
-### Negocio
+**Notación:** El impacto y la probabilidad de cada riesgo se clasifican de 1 a 3, donde 1 es bajo, 2 es medio y 3 es alto. El riesgo se calcula como el producto del impacto y la probabilidad, y se clasifica como bajo (1-3), medio (4-6) o alto (7-9).
 
-- **Pérdidas financieras por fallos de lógica:**  
-  Si el algoritmo calcula mal el cruce entre peso y distancia desde el origen al destino, podría asignar sistemáticamente la opción más cara cuando el usuario prioriza el costo.
+### Riesgos de Negocio
 
-- **Incumplimiento de la propuesta de valor:**  
-  Si el usuario prioriza “más rápido” y el sistema falla en estimar los tiempos, el producto puede llegar tarde, afectando la experiencia de usuario del cliente.
-
-- **Incompatibilidad del modelo del “Proveedor local”:**  
-  Empresas como DHL y FedEx tienen sistemas y matrices de precios estandarizados y muy estructurados. Un proveedor local en cambio, puede ser más informal, y el sistema correría riesgos tales como:
-  - Cambios de precio sin aviso  
-  - Información desactualizada  
+| Riesgo | Descripción | Impacto | Probabilidad | Riesgo | Mitigación |
+| --- | --- | --- | --- | --- | --- |
+| **R1: Pérdidas financieras por fallos de lógica** | Si el algoritmo calcula mal el cruce entre peso y distancia desde el origen al destino, podría asignar sistemáticamente la opción más cara cuando el usuario prioriza el costo. | 3 | 2 | Alto (6) | Realizar pruebas exhaustivas del algoritmo de recomendación, incluyendo casos límite y validación con datos reales. |
+| **R2: Incumplimiento de la propuesta de valor** | Si el usuario prioriza “más rápido” y el sistema falla en estimar los tiempos, el producto puede llegar tarde, afectando la experiencia de usuario del cliente. | 3 | 2 | Alto (6) | Implementar un sistema de retroalimentación para que los usuarios puedan reportar discrepancias en los tiempos estimados y ajustar el algoritmo en consecuencia. |
+| **R3: Incompatibilidad del modelo del “Proveedor local”** | Empresas como DHL y FedEx tienen sistemas y matrices de precios estandarizados y muy estructurados. Un proveedor local en cambio, puede ser más informal, y el sistema correría riesgos tales como cambios de precio sin aviso o información desactualizada. | 2 | 3 | Alto (6) | Establecer acuerdos claros con los proveedores locales para garantizar la actualización periódica de sus tarifas y condiciones, así como implementar un sistema de monitoreo para detectar cambios en tiempo real. |
 
 ### Técnico
 
