@@ -296,6 +296,14 @@ Escenario: Usuario no selecciona proveedor
 	Y debe informar que se debe seleccionar un proveedor para continuar 
 ```
 
+```gherkin
+Escenario: Persistencia de información al seleccionar proveedor
+    Dado que el sistema mostró la opción recomendada y las opciones disponibles
+    Cuando el usuario seleccione un proveedor y confirme su selección
+    Entonces el sistema debe persistir la información del pedido con el proveedor seleccionado
+    Y debe permitir continuar con el proceso del pedido
+```
+
 ### Definition of Done (DoD)
 - La funcionalidad de selección y confirmación del proveedor está implementada.
 - El sistema permite seleccionar un proveedor de las opciones disponibles.
