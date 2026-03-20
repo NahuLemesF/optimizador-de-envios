@@ -82,6 +82,7 @@ Permitir al usuario seleccionar el criterio de optimización del envío para que
 - Ejecutar pruebas funcionales y registrar hallazgos.
 
 ## Estimación: 3 puntos
+
 ### Justificación:
 - **DEV:** Esfuerzo bajo. Se actualiza el modelo del pedido para incluir la prioridad y se implementa un endpoint para actualizar esta información. En el frontend, se desarrolla una pantalla sencilla para seleccionar la prioridad, con validación de selección y almacenamiento en el estado global.
 - **QA**: Esfuerzo bajo. Se deben validar casos funcionales de selección de prioridad y obligatoriedad. El proceso es bastante directo, por lo que no requiere pruebas complejas.
@@ -96,9 +97,9 @@ Permitir al usuario obtener la mejor opción de envío según la prioridad selec
 ### Backend
 - Crear los DTOs necesarios para solicitar y devolver la recomendación.
 - Configurar los proveedores mock y sus valores de cotización.
-- Implementar la integración simulada con los proveedores mediante adapter.
+- Implementar la integración simulada con los proveedores mediante el patrón adapter.
 - Implementar el servicio de cotización para consultar todos los proveedores disponibles.
-- Implementar el motor de recomendación según prioridad y reglas de desempate.
+- Implementar el motor de recomendación según prioridad y reglas de desempate utilizando los patrones strategy y factory.
 - Exponer el endpoint `POST /recomendacion`.
 - Realizar pruebas de cobertura e integración.
 
@@ -120,6 +121,11 @@ Permitir al usuario obtener la mejor opción de envío según la prioridad selec
 - Verificar la correcta aplicación de las reglas de desempate.
 - Validar la pantalla de resultados y la visualización de la recomendación principal.
 - Ejecutar pruebas funcionales del flujo de recomendación y registrar hallazgos.
+
+## Estimación: 8 puntos
+### Justificación:
+- **DEV:** Esfuerzo alto. Se implementa la lógica de integración con proveedores de envío, el motor de recomendación y el endpoint para obtener la recomendación principal, utilizando los patrones strategy y factory. En el frontend, se desarrolla la pantalla de resultados y se consume el endpoint para mostrar la recomendación al usuario.
+- **QA**: Esfuerzo medio-alto. Se deben validar casos funcionales de recomendación según prioridad y reglas de desempate. El proceso es más complejo debido a la lógica de recomendación, por lo que requiere pruebas detalladas para asegurar la correcta aplicación de las reglas.
 
 # HU-04 | Consultar opciones alternativas
 
