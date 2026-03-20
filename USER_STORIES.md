@@ -46,9 +46,17 @@ Escenario: Destino sin Cobertura
 ```
 
 ```gherkin
-Escenario: Peso no permitido
+Escenario: Peso fuera del máximo permitido
     Dado que el usuario necesita enviar un producto
     Cuando ingresa un peso mayor al permitido por los proveedores logísticos
+    Entonces el sistema no debe permitir continuar con el cálculo del envío
+    Y debe informar que el peso ingresado no está cubierto por los proveedores disponibles
+```
+
+```gherkin
+Escenario: Peso fuera del mínimo permitido
+    Dado que el usuario necesita enviar un producto
+    Cuando ingresa un peso menor al permitido por los proveedores logísticos
     Entonces el sistema no debe permitir continuar con el cálculo del envío
     Y debe informar que el peso ingresado no está cubierto por los proveedores disponibles
 ```
