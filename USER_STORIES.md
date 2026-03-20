@@ -288,7 +288,10 @@ Escenario: Usuario no selecciona proveedor
 - Se cumplen los criterios de aceptación definidos.
 - La historia fue validada por QA.
 
+---
+
 ## Estimación de las Historias de Usuario
+
 | Historia de Usuario | Estimación (Story Points) |
 |---------------------|--------------------------------|
 | HU-01 | 5 |
@@ -297,7 +300,21 @@ Escenario: Usuario no selecciona proveedor
 | HU-04 | 3 |
 | HU-05 | 5 |
 
-> 💡 Nota: La justificación de las estimaciones se encuentra detallada en el documento de subtareas (SUBTASKS.md) para cada historia de usuario.
+> 💡 Nota: 
+> La justificación de las estimaciones se encuentra detallada en el documento de subtareas (SUBTASKS.md) para cada historia de usuario.
+
+---
+
+**Notación:** 
+- La estimación se realizó utilizando la técnica de **Story Points**, considerando la complejidad, el esfuerzo y el riesgo asociado a cada historia de usuario.
+
+**Rúbrica de estimación:**
+- **1 SP:** Historia sencilla, sin dependencias y ni incertidumbres importantes.
+- **2 SP:** Historia con baja complejidad, con pocas dependencias o incertidumbres menores.
+- **3 SP:** Historia de complejidad media, con algunas dependencias o incertidumbres moderadas.
+- **5 SP:** Historia compleja, con múltiples dependencias o incertidumbres significativas.
+- **8 SP:** Historia muy compleja, con muchas dependencias o incertidumbres altas.
+- **13 SP:** Historia extremadamente compleja, con numerosas dependencias o incertidumbres muy altas (En algunos casos, puede ser dividida en historias más pequeñas).
 
 ---
 
