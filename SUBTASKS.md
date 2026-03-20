@@ -68,6 +68,7 @@ Permitir al usuario seleccionar el criterio de optimización del envío para que
 - Manejar errores enviados por el backend.
 - Realizar pruebas unitarias y de cobertura.
 
+
 ## Subtareas QA
 
 ### Análisis y diseño
@@ -209,5 +210,8 @@ Permitir al usuario seleccionar un proveedor de envío y confirmar su selección
 - Ejecutar pruebas funcionales del flujo completo de confirmación.
 - Registrar hallazgos y validar el cumplimiento de los criterios de aceptación.
 
-
+## Estimación: 5 puntos
+### Justificación:
+- **DEV:** Esfuerzo medio. Se implementa la lógica para confirmar el pedido, incluyendo validaciones, recalculo de cotizaciones y persistencia. En el frontend, se desarrolla la funcionalidad para confirmar la selección del proveedor y manejar la navegación y errores.
+- **QA**: Esfuerzo medio. Se deben validar casos funcionales de confirmación del pedido, incluyendo validación de selección, manejo de errores y persistencia. El proceso es más complejo debido a la confirmación del pedido, por lo que requiere pruebas detalladas para asegurar la correcta aplicación de las reglas y la persistencia de los datos.
     
