@@ -38,6 +38,14 @@ Escenario: Ingreso de Datos Válidos
 ```
 
 ```gherkin
+Escenario: Intento de registro con campos vacíos
+    Dado que el usuario necesita enviar un producto
+    Cuando intenta registrar un pedido sin ingresar origen, destino o peso
+    Entonces el sistema no debe permitir continuar con el cálculo del envío
+    Y debe informar que todos los campos son obligatorios
+```
+
+```gherkin
 Escenario: Destino sin Cobertura
     Dado que el usuario necesita enviar un producto
     Cuando ingresa un destino fuera de la cobertura de los proveedores logísticos
