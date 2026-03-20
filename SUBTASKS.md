@@ -81,6 +81,11 @@ Permitir al usuario seleccionar el criterio de optimización del envío para que
 - Validar el flujo completo de selección de prioridad y manejo de errores.
 - Ejecutar pruebas funcionales y registrar hallazgos.
 
+## Estimación: 3 puntos
+### Justificación:
+- **DEV:** Esfuerzo bajo. Se actualiza el modelo del pedido para incluir la prioridad y se implementa un endpoint para actualizar esta información. En el frontend, se desarrolla una pantalla sencilla para seleccionar la prioridad, con validación de selección y almacenamiento en el estado global.
+- **QA**: Esfuerzo bajo. Se deben validar casos funcionales de selección de prioridad y obligatoriedad. El proceso es bastante directo, por lo que no requiere pruebas complejas.
+
 # HU-03 | Obtener recomendación principal de proveedor de envío
 
 ## Objetivo de la historia
