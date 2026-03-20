@@ -18,12 +18,12 @@ Construir una herramienta logística que automatice la selección del proveedor 
 
 ### 2.2 Objetivos
 
-| Objetivo | Descripción | KPI de éxito |
-| --- | --- | --- |
-| **O1** | Automatizar la selección del proveedor de transporte evaluando las opciones entre FedEx, DHL y proveedores locales. | - Al menos el 90% de los usuarios reportan que la recomendación del sistema se ajusta a su prioridad seleccionada (costo o tiempo). <br/> - El 100% de las recomendaciones generadas cumplen con las reglas de negocio definidas (verificable mediante pruebas). |
-| **O2** | Centralizar múltiples proveedores de transporte en una sola herramienta simplificando el proceso de toma de decisiones. | - Al menos el 80% de los usuarios encuentran la herramienta fácil de usar para comparar opciones de envío. <br/> - El 100% de las opciones de envío disponibles se muestran correctamente en la interfaz de usuario (verificable mediante pruebas). |
-| **O3** | Permitir la optimización del envío según la prioridad elegida por el cliente: menor costo o  menor tiempo de entrega. | - Al menos el 85% de los usuarios reportan que la opción recomendada cumple con su prioridad seleccionada. <br/> - El 100% de las recomendaciones generadas cumplen con las reglas de negocio definidas (verificable mediante pruebas). |
-| **O4** | Unificar y proveer estimaciones de precio y tiempo de entrega para entregar al cliente la opción más adecuada a sus requerimientos. | - Al menos el 90% de los usuarios consideran que las estimaciones proporcionadas son precisas y útiles. <br/> - El 100% de las estimaciones generadas cumplen con las reglas de negocio definidas (verificable mediante pruebas). |
+| Objetivo | Descripción |
+| --- | --- |
+| **O1** | Automatizar la selección del proveedor de transporte evaluando las opciones entre FedEx, DHL y proveedores locales. |
+| **O2** | Centralizar múltiples proveedores de transporte en una sola herramienta simplificando el proceso de toma de decisiones. |
+| **O3** | Permitir la optimización del envío según la prioridad elegida por el cliente: menor costo o  menor tiempo de entrega. |
+| **O4** | Unificar y proveer estimaciones de precio y tiempo de entrega para entregar al cliente la opción más adecuada a sus requerimientos. |
 
 ---
 
