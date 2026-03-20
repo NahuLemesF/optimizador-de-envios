@@ -288,6 +288,17 @@ Escenario: Usuario no selecciona proveedor
 - Se cumplen los criterios de aceptación definidos.
 - La historia fue validada por QA.
 
+## Estimación de las Historias de Usuario
+| Historia de Usuario | Estimación (Story Points) |
+|---------------------|--------------------------------|
+| HU-01 | 5 |
+| HU-02 | 3 |
+| HU-03 | 8 |
+| HU-04 | 3 |
+| HU-05 | 5 |
+
+> 💡 Nota: La justificación de las estimaciones se encuentra detallada en el documento de subtareas (SUBTASKS.md) para cada historia de usuario.
+
 ---
 
 Autores: **Nahuel Lemes** y **Santiago Angarita**.

@@ -44,6 +44,7 @@ Permitirle al usuario agregar pedido para calcular y obtener una recomendación 
 - **DEV:** Esfuerzo medio. Se implementa el registro del pedido con validaciones de datos (origen, destino y peso), construcción de DTOs y endpoint. La complejidad radica en asegurar la consistencia de los datos y su correcto guardado en el estado global. En el frontend, se desarrolla el formulario con sus correspondientes validaciones.
 - **QA**: Esfuerzo medio. Se deben cubrir casos funcionales del registro del pedido, validar campos obligatorios y verificar la correcta respuesta del backend. Los escenarios son bastante simples, por lo que no requiere pruebas complejas.
 
+---
 
 # HU-02 | Definir prioridad del envío
 
@@ -88,6 +89,8 @@ Permitir al usuario seleccionar el criterio de optimización del envío para que
 - **DEV:** Esfuerzo bajo. Se actualiza el modelo del pedido para incluir la prioridad y se implementa un endpoint para actualizar esta información. En el frontend, se desarrolla una pantalla sencilla para seleccionar la prioridad, con validación de selección y almacenamiento en el estado global.
 - **QA**: Esfuerzo bajo. Se deben validar casos funcionales de selección de prioridad y obligatoriedad. El proceso es bastante directo, por lo que no requiere pruebas complejas.
 
+---
+
 # HU-03 | Obtener recomendación principal de proveedor de envío
 
 ## Objetivo de la historia
@@ -128,6 +131,8 @@ Permitir al usuario obtener la mejor opción de envío según la prioridad selec
 ### Justificación:
 - **DEV:** Esfuerzo alto. Se implementa la lógica de integración con proveedores de envío, el motor de recomendación y el endpoint para obtener la recomendación principal, utilizando los patrones strategy y factory. En el frontend, se desarrolla la pantalla de resultados y se consume el endpoint para mostrar la recomendación al usuario.
 - **QA**: Esfuerzo medio-alto. Se deben validar casos funcionales de recomendación según prioridad y reglas de desempate. El proceso es más complejo debido a la lógica de recomendación, por lo que requiere pruebas detalladas para asegurar la correcta aplicación de las reglas.
+
+---
 
 # HU-04 | Consultar opciones alternativas
 
@@ -175,6 +180,8 @@ Permitir al usuario visualizar opciones alternativas de proveedores de transport
 - **DEV:** Esfuerzo medio-bajo. Se reutilizan los DTOs existentes para mostrar las opciones alternativas en el frontend, con una separación clara de la recomendación principal. Se implementa la lógica para mostrar la información relevante de cada alternativa y permitir su selección.
 - **QA**: Esfuerzo bajo. Se deben validar casos funcionales de visualización de alternativas y selección de una opción alternativa. El proceso es bastante directo, por lo que no requiere pruebas complejas.
 
+---
+
 # HU-05 | Seleccionar y confirmar proveedor
 
 ## Objetivo de la historia
@@ -214,4 +221,6 @@ Permitir al usuario seleccionar un proveedor de envío y confirmar su selección
 ### Justificación:
 - **DEV:** Esfuerzo medio. Se implementa la lógica para confirmar el pedido, incluyendo validaciones, recalculo de cotizaciones y persistencia. En el frontend, se desarrolla la funcionalidad para confirmar la selección del proveedor y manejar la navegación y errores.
 - **QA**: Esfuerzo medio. Se deben validar casos funcionales de confirmación del pedido, incluyendo validación de selección, manejo de errores y persistencia. El proceso es más complejo debido a la confirmación del pedido, por lo que requiere pruebas detalladas para asegurar la correcta aplicación de las reglas y la persistencia de los datos.
+
+---
     
