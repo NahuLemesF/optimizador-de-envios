@@ -123,6 +123,7 @@ Permitir al usuario obtener la mejor opción de envío según la prioridad selec
 - Ejecutar pruebas funcionales del flujo de recomendación y registrar hallazgos.
 
 ## Estimación: 8 puntos
+
 ### Justificación:
 - **DEV:** Esfuerzo alto. Se implementa la lógica de integración con proveedores de envío, el motor de recomendación y el endpoint para obtener la recomendación principal, utilizando los patrones strategy y factory. En el frontend, se desarrolla la pantalla de resultados y se consume el endpoint para mostrar la recomendación al usuario.
 - **QA**: Esfuerzo medio-alto. Se deben validar casos funcionales de recomendación según prioridad y reglas de desempate. El proceso es más complejo debido a la lógica de recomendación, por lo que requiere pruebas detalladas para asegurar la correcta aplicación de las reglas.
@@ -167,10 +168,16 @@ Permitir al usuario visualizar opciones alternativas de proveedores de transport
 - Validar la selección de una opción alternativa desde la interfaz.
 - Ejecutar pruebas funcionales y registrar hallazgos.
 
+## Estimación: 3 puntos
+
+### Justificación:
+- **DEV:** Esfuerzo medio-bajo. Se reutilizan los DTOs existentes para mostrar las opciones alternativas en el frontend, con una separación clara de la recomendación principal. Se implementa la lógica para mostrar la información relevante de cada alternativa y permitir su selección.
+- **QA**: Esfuerzo bajo. Se deben validar casos funcionales de visualización de alternativas y selección de una opción alternativa. El proceso es bastante directo, por lo que no requiere pruebas complejas.
+
 # HU-05 | Seleccionar y confirmar proveedor
 
 ## Objetivo de la historia
-Permitir al usuario seleccionar un proveedor de envío y confirmar su selección para.
+Permitir al usuario seleccionar un proveedor de envío y confirmar su selección para completar el proceso de pedido.
 
 ## Subtareas DEV
 
@@ -201,4 +208,6 @@ Permitir al usuario seleccionar un proveedor de envío y confirmar su selección
 - Verificar la selección y confirmación del proveedor en frontend, incluyendo navegación y manejo de errores.
 - Ejecutar pruebas funcionales del flujo completo de confirmación.
 - Registrar hallazgos y validar el cumplimiento de los criterios de aceptación.
+
+
     
