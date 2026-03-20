@@ -64,21 +64,23 @@ Construir una herramienta logística que automatice la selección del proveedor 
 
 ## 5. Riesgos técnicos y de negocio
 
-**Notación:** El impacto y la probabilidad de cada riesgo se clasifican de 1 a 3, donde 1 es bajo, 2 es medio y 3 es alto. El riesgo se calcula como el producto del impacto y la probabilidad, y se clasifica como bajo (1-3), medio (4-6) o alto (7-9).
+> **Notación:**  
+> El impacto y la probabilidad de cada riesgo se clasifican de 1 a 3, donde 1 es bajo, 2 es medio y 3 es alto.  
+> El riesgo se calcula como el producto del impacto y la probabilidad, y se clasifica como bajo (1-3), medio (4-6) o alto (7-9).
 
-### Riesgos de Negocio
+### 5.1 Riesgos de Negocio
 
 | Riesgo | Descripción | Impacto | Probabilidad | Riesgo | Mitigación |
 | --- | --- | --- | --- | --- | --- |
 | **R1: Pérdidas financieras por fallos de lógica** | Si el algoritmo calcula mal el cruce entre peso y distancia desde el origen al destino, podría asignar sistemáticamente la opción más cara cuando el usuario prioriza el costo. | 3 | 2 | Alto (6) | Realizar pruebas exhaustivas del algoritmo de recomendación, incluyendo casos límite y validación con datos reales. |
 | **R2: Incumplimiento de la propuesta de valor** | Si el usuario prioriza “más rápido” y el sistema falla en estimar los tiempos, el producto puede llegar tarde, afectando la experiencia de usuario del cliente. | 3 | 2 | Alto (6) | Implementar un sistema de retroalimentación para que los usuarios puedan reportar discrepancias en los tiempos estimados y ajustar el algoritmo en consecuencia. |
-| **R3: Incompatibilidad del modelo del “Proveedor local”** | Empresas como DHL y FedEx tienen sistemas y matrices de precios estandarizados y muy estructurados. Un proveedor local en cambio, puede ser más informal, y el sistema correría riesgos tales como cambios de precio sin aviso o información desactualizada. | 2 | 3 | Alto (6) | Establecer acuerdos claros con los proveedores locales para garantizar la actualización periódica de sus tarifas y condiciones, así como implementar un sistema de monitoreo para detectar cambios en tiempo real. |
+| **R3: Incompatibilidad del modelo del “Proveedor local”** | Empresas como DHL y FedEx tienen sistemas y matrices de precios estandarizados y muy estructurados. Un proveedor local en cambio, puede ser más informal, y el sistema correría riesgos tales como cambios de precio sin aviso o información desactualizada. | 2 | 2 | Medio (4) | Establecer acuerdos claros con los proveedores locales para garantizar la actualización periódica de sus tarifas y condiciones, así como implementar un sistema de monitoreo para detectar cambios en tiempo real. |
 
-### Técnico
+### 5.2 Riesgos Técnicos
 
-- **Acoplamiento fuerte a proveedores específicos:** una implementación poco flexible puede dificultar la escalabilidad (ejemplo: agregar un nuevo proveedor) en futuras versiones.
-
-- **Inconsistencia en los datos de entrada:** si el sistema no gestiona los tipos de datos de forma adecuada (ejemplo: tipos de medidas en peso, origen y destino correctos, tipo de moneda) podría verse afectado el cálculo de las opciones disponibles.
-
-- **Manejo insuficiente de casos límite:** destinos sin cobertura o pesos no admitidos por los proveedores pueden generar fallos si no se controlan adecuadamente.
+| Riesgo | Descripción | Impacto | Probabilidad | Riesgo | Mitigación |
+| --- | --- | --- | --- | --- | --- |
+| **R4: Acoplamiento fuerte a proveedores específicos** | Una implementación poco flexible puede dificultar la escalabilidad (ejemplo: agregar un nuevo proveedor) en futuras versiones. | 2 | 3 | Alto (6) | Diseñar el sistema con una arquitectura modular y orientada a servicios, utilizando interfaces y abstracciones para facilitar la integración de nuevos proveedores sin afectar la lógica central. |
+| **R5: Inconsistencia en los datos de entrada** | Si el sistema no gestiona los tipos de datos de forma adecuada (ejemplo: tipos de medidas en peso, origen y destino correctos, tipo de moneda) podría verse afectado el cálculo de las opciones disponibles. | 3 | 2 | Alto (6) | Implementar validaciones estrictas en la entrada de datos, incluyendo formatos, rangos permitidos y tipos de datos, para asegurar que la información ingresada sea consistente y adecuada para el procesamiento. |
+| **R6: Manejo insuficiente de casos límite** | Destinos sin cobertura o pesos no admitidos por los proveedores pueden generar fallos si no se controlan adecuadamente. | 3 | 1 | Bajo (3) | Desarrollar un sistema de manejo de errores robusto que identifique y gestione adecuadamente los casos límite, proporcionando mensajes claros al usuario y evitando que el sistema falle ante situaciones no contempladas. |
 
