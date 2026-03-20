@@ -20,10 +20,10 @@ Construir una herramienta logística que automatice la selección del proveedor 
 
 | Objetivo | Descripción | KPI de éxito |
 | --- | --- | --- |
-| **O1** | Automatizar la selección del proveedor de transporte evaluando las opciones entre FedEx, DHL y proveedores locales. | Al menos el 90% de los usuarios reportan que la recomendación del sistema se ajusta a su prioridad seleccionada (costo o tiempo). |
-| **O2** | Centralizar múltiples proveedores de transporte en una sola herramienta simplificando el proceso de toma de decisiones. | Al menos el 80% de los usuarios encuentran la herramienta fácil de usar para comparar opciones de envío. |
-| **O3** | Permitir la optimización del envío según la prioridad elegida por el cliente: menor costo o  menor tiempo de entrega. | Al menos el 85% de los usuarios reportan que la opción recomendada cumple con su prioridad seleccionada. |
-| **O4** | Unificar y proveer estimaciones de precio y tiempo de entrega para entregar al cliente la opción más adecuada a sus requerimientos. | Al menos el 90% de los usuarios consideran que las estimaciones proporcionadas son precisas y útiles. |  
+| **O1** | Automatizar la selección del proveedor de transporte evaluando las opciones entre FedEx, DHL y proveedores locales. | - Al menos el 90% de los usuarios reportan que la recomendación del sistema se ajusta a su prioridad seleccionada (costo o tiempo). <br/> - El 100% de las recomendaciones generadas cumplen con las reglas de negocio definidas (verificable mediante pruebas). |
+| **O2** | Centralizar múltiples proveedores de transporte en una sola herramienta simplificando el proceso de toma de decisiones. | - Al menos el 80% de los usuarios encuentran la herramienta fácil de usar para comparar opciones de envío. <br/> - El 100% de las opciones de envío disponibles se muestran correctamente en la interfaz de usuario (verificable mediante pruebas). |
+| **O3** | Permitir la optimización del envío según la prioridad elegida por el cliente: menor costo o  menor tiempo de entrega. | - Al menos el 85% de los usuarios reportan que la opción recomendada cumple con su prioridad seleccionada. <br/> - El 100% de las recomendaciones generadas cumplen con las reglas de negocio definidas (verificable mediante pruebas). |
+| **O4** | Unificar y proveer estimaciones de precio y tiempo de entrega para entregar al cliente la opción más adecuada a sus requerimientos. | - Al menos el 90% de los usuarios consideran que las estimaciones proporcionadas son precisas y útiles. <br/> - El 100% de las estimaciones generadas cumplen con las reglas de negocio definidas (verificable mediante pruebas). |
 
 ---
 
@@ -60,6 +60,10 @@ Construir una herramienta logística que automatice la selección del proveedor 
 - **Seguimiento del envío (tracking).**
 - **Gestión de pedidos internacionales.**
 
+> 💡 **Nota sobre proveedores:** En el MVP, los proveedores (FedEx, DHL y un proveedor local representativo) 
+> se modelarán con datos simulados (mock). El proveedor local representa una empresa de mensajería 
+> regional colombiana con tarifas y tiempos predefinidos en el sistema.
+
 ---
 
 ## 5. Riesgos técnicos y de negocio
@@ -72,15 +76,15 @@ Construir una herramienta logística que automatice la selección del proveedor 
 
 | Riesgo | Descripción | Impacto | Probabilidad | Riesgo | Mitigación |
 | --- | --- | --- | --- | --- | --- |
-| **R1: Pérdidas financieras por fallos de lógica** | Si el algoritmo calcula mal el cruce entre peso y distancia desde el origen al destino, podría asignar sistemáticamente la opción más cara cuando el usuario prioriza el costo. | 3 | 2 | Alto (6) | Realizar pruebas exhaustivas del algoritmo de recomendación, incluyendo casos límite y validación con datos reales. |
-| **R2: Incumplimiento de la propuesta de valor** | Si el usuario prioriza “más rápido” y el sistema falla en estimar los tiempos, el producto puede llegar tarde, afectando la experiencia de usuario del cliente. | 3 | 2 | Alto (6) | Implementar un sistema de retroalimentación para que los usuarios puedan reportar discrepancias en los tiempos estimados y ajustar el algoritmo en consecuencia. |
+| **R1: Pérdidas financieras por fallos de lógica** | Si el algoritmo calcula mal el cruce entre peso y distancia desde el origen al destino, podría asignar sistemáticamente la opción más cara cuando el usuario prioriza el costo. | 3 | 2 | Medio (6) | Realizar pruebas exhaustivas del algoritmo de recomendación, incluyendo casos límite y validación con datos reales. |
+| **R2: Incumplimiento de la propuesta de valor** | Si el usuario prioriza “más rápido” y el sistema falla en estimar los tiempos, el producto puede llegar tarde, afectando la experiencia de usuario del cliente. | 3 | 2 | Medio (6) | Implementar un sistema de retroalimentación para que los usuarios puedan reportar discrepancias en los tiempos estimados y ajustar el algoritmo en consecuencia. |
 | **R3: Incompatibilidad del modelo del “Proveedor local”** | Empresas como DHL y FedEx tienen sistemas y matrices de precios estandarizados y muy estructurados. Un proveedor local en cambio, puede ser más informal, y el sistema correría riesgos tales como cambios de precio sin aviso o información desactualizada. | 2 | 2 | Medio (4) | Establecer acuerdos claros con los proveedores locales para garantizar la actualización periódica de sus tarifas y condiciones, así como implementar un sistema de monitoreo para detectar cambios en tiempo real. |
 
 ### 5.2 Riesgos Técnicos
 
 | Riesgo | Descripción | Impacto | Probabilidad | Riesgo | Mitigación |
 | --- | --- | --- | --- | --- | --- |
-| **R4: Acoplamiento fuerte a proveedores específicos** | Una implementación poco flexible puede dificultar la escalabilidad (ejemplo: agregar un nuevo proveedor) en futuras versiones. | 2 | 3 | Alto (6) | Diseñar el sistema con una arquitectura modular y orientada a servicios, utilizando interfaces y abstracciones para facilitar la integración de nuevos proveedores sin afectar la lógica central. |
-| **R5: Inconsistencia en los datos de entrada** | Si el sistema no gestiona los tipos de datos de forma adecuada (ejemplo: tipos de medidas en peso, origen y destino correctos, tipo de moneda) podría verse afectado el cálculo de las opciones disponibles. | 3 | 2 | Alto (6) | Implementar validaciones estrictas en la entrada de datos, incluyendo formatos, rangos permitidos y tipos de datos, para asegurar que la información ingresada sea consistente y adecuada para el procesamiento. |
+| **R4: Acoplamiento fuerte a proveedores específicos** | Una implementación poco flexible puede dificultar la escalabilidad (ejemplo: agregar un nuevo proveedor) en futuras versiones. | 2 | 3 | Medio (6) | Diseñar el sistema con una arquitectura modular y orientada a servicios, utilizando interfaces y abstracciones para facilitar la integración de nuevos proveedores sin afectar la lógica central. |
+| **R5: Inconsistencia en los datos de entrada** | Si el sistema no gestiona los tipos de datos de forma adecuada (ejemplo: tipos de medidas en peso, origen y destino correctos, tipo de moneda) podría verse afectado el cálculo de las opciones disponibles. | 3 | 2 | Medio (6) | Implementar validaciones estrictas en la entrada de datos, incluyendo formatos, rangos permitidos y tipos de datos, para asegurar que la información ingresada sea consistente y adecuada para el procesamiento. |
 | **R6: Manejo insuficiente de casos límite** | Destinos sin cobertura o pesos no admitidos por los proveedores pueden generar fallos si no se controlan adecuadamente. | 3 | 1 | Bajo (3) | Desarrollar un sistema de manejo de errores robusto que identifique y gestione adecuadamente los casos límite, proporcionando mensajes claros al usuario y evitando que el sistema falle ante situaciones no contempladas. |
 
