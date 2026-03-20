@@ -10,33 +10,33 @@ Permitirle al usuario agregar pedido para calcular y obtener una recomendación 
 ## Subtareas DEV
 
 ### Backend
-T-01 | Definir el modelo Pedido y los DTOs necesarios para el registro del envío.
-T-02 | Implementar validaciones de campos obligatorios, rango de peso y cobertura en Colombia.
-T-03 | Implementar conversión de unidades de peso y normalización a kilogramos.
-T-04 | Integrar un servicio externo de geolocalización para autocompletado de ubicaciones y cálculo de distancia (*openRouteService*).
-T-05 | Implementar endpoints `GET /locations/autocomplete` y `POST /pedido`.
-T-06 | Realizar pruebas unitarias y de cobertura para las capas del backend.
+- **HU01-T-01** | Definir el modelo Pedido y los DTOs necesarios para el registro del envío.
+- **HU01-T-02** | Implementar validaciones de campos obligatorios, rango de peso y cobertura en Colombia.
+- **HU01-T-03** | Implementar conversión de unidades de peso y normalización a kilogramos.
+- **HU01-T-04** | Integrar un servicio externo de geolocalización para autocompletado de ubicaciones y cálculo de distancia (*openRouteService*).
+- **HU01-T-05** | Implementar endpoints `GET /locations/autocomplete` y `POST /pedido`.
+- **HU01-T-06** | Realizar pruebas unitarias y de cobertura para las capas del backend.
 
 ### Frontend
-T-07 | Implementar formulario de registro con origen, destino, peso y unidad.
-T-08 | Implementar autocompletado para origen y destino consumiendo el endpoint correspondiente.
-T-09 | Validar campos obligatorios y formato del peso.
-T-10 | Consumir endpoint `POST /pedido` y almacenar la información en el estado global.
-T-11 | Permitir la navegación al siguiente paso del flujo.
-T-12 | Realizar pruebas unitarias y de cobertura.
+- **HU01-T-07** | Implementar formulario de registro con origen, destino, peso y unidad.
+- **HU01-T-08** | Implementar autocompletado para origen y destino consumiendo el endpoint correspondiente.
+- **HU01-T-09** | Validar campos obligatorios y formato del peso.
+- **HU01-T-10** | Consumir endpoint `POST /pedido` y almacenar la información en el estado global.
+- **HU01-T-11** | Permitir la navegación al siguiente paso del flujo.
+- **HU01-T-12** | Realizar pruebas unitarias y de cobertura.
 
 ## Subtareas QA
 
 ### Análisis y diseño
-T-13 (QA) | Revisar que la HU, reglas de negocio y criterios de aceptación sean claros y testeables.
-T-14 (QA) | Diseñar casos de prueba para registro exitoso, validación de campos, peso fuera de rango y cobertura geográfica.
+- **HU01-T-13 (QA)** | Revisar que la HU, reglas de negocio y criterios de aceptación sean claros y testeables.
+- **HU01-T-14 (QA)** | Diseñar casos de prueba para registro exitoso, validación de campos, peso fuera de rango y cobertura geográfica.
 
 ### Validación técnica y funcional
-T-15 (QA) | Verificar el funcionamiento de los endpoints `GET /locations/autocomplete` y `POST /pedido`.
-T-16 (QA) | Validar el autocompletado y la restricción de ubicaciones dentro de Colombia.
-T-17 (QA) | Verificar la conversión de unidades y cálculo de distancia.
-T-18 (QA) | Validar el flujo completo desde frontend, incluyendo almacenamiento en estado global.
-T-19 (QA) | Ejecutar pruebas funcionales y registrar hallazgos.
+- **HU01-T-15 (QA)** | Verificar el funcionamiento de los endpoints `GET /locations/autocomplete` y `POST /pedido`.
+- **HU01-T-16 (QA)** | Validar el autocompletado y la restricción de ubicaciones dentro de Colombia.
+- **HU01-T-17 (QA)** | Verificar la conversión de unidades y cálculo de distancia.
+- **HU01-T-18 (QA)** | Validar el flujo completo desde frontend, incluyendo almacenamiento en estado global.
+- **HU01-T-19 (QA)** | Ejecutar pruebas funcionales y registrar hallazgos.
 
 ## Estimación: 5 puntos
 
@@ -54,34 +54,34 @@ Permitir al usuario seleccionar el criterio de optimización del envío para que
 ## Subtareas DEV
 
 ### Backend
-- **T-01** | Extender el modelo Pedido para incluir el atributo prioridad.
-- **T-02** | Crear y ajustar los DTOs necesarios para manejar la prioridad.
-- **T-03** | Implementar validación de prioridad obligatoria.
-- **T-04** | Asociar la prioridad al pedido en memoria.
-- **T-05** | Exponer el endpoint POST /pedidos/prioridad.
-- **T-06** | Realizar pruebas unitarias y de cobertura.
+- **HU02-T-01** | Extender el modelo Pedido para incluir el atributo prioridad.
+- **HU02-T-02** | Crear y ajustar los DTOs necesarios para manejar la prioridad.
+- **HU02-T-03** | Implementar validación de prioridad obligatoria.
+- **HU02-T-04** | Asociar la prioridad al pedido en memoria.
+- **HU02-T-05** | Exponer el endpoint POST /pedidos/prioridad.
+- **HU02-T-06** | Realizar pruebas unitarias y de cobertura.
 
 ### Frontend
-- **T-07** | Implementar pantalla de selección de prioridad (económico o rápido).
-- **T-08** | Validar que el usuario seleccione una opción antes de continuar.
-- **T-09** | Guardar la prioridad en el estado global.
-- **T-10** | Consumir el endpoint POST /pedidos/prioridad.
-- **T-11** | Manejar errores enviados por el backend.
-- **T-12** | Realizar pruebas unitarias y de cobertura.
+- **HU02-T-07** | Implementar pantalla de selección de prioridad (económico o rápido).
+- **HU02-T-08** | Validar que el usuario seleccione una opción antes de continuar.
+- **HU02-T-09** | Guardar la prioridad en el estado global.
+- **HU02-T-10** | Consumir el endpoint POST /pedidos/prioridad.
+- **HU02-T-11** | Manejar errores enviados por el backend.
+- **HU02-T-12** | Realizar pruebas unitarias y de cobertura.
 
 
 ## Subtareas QA
 
 ### Análisis y diseño
-- **T-13 (QA)** | Revisar que la HU, reglas de negocio y criterios de aceptación sean claros y testeables.
-- **T-14 (QA)** | Diseñar casos de prueba para selección de prioridad y validación de obligatoriedad.
+- **HU02-T-13 (QA)** | Revisar que la HU, reglas de negocio y criterios de aceptación sean claros y testeables.
+- **HU02-T-14 (QA)** | Diseñar casos de prueba para selección de prioridad y validación de obligatoriedad.
 
 ### Validación técnica y funcional
-- **T-15 (QA)** | Verificar el funcionamiento del endpoint POST /pedidos/prioridad.
-- **T-16 (QA)** | Validar que la prioridad se guarde correctamente en memoria.
-- **T-17 (QA)** | Verificar la selección de prioridad en frontend y su almacenamiento en el estado global.
-- **T-18 (QA)** | Validar el flujo completo de selección de prioridad y manejo de errores.
-- **T-19 (QA)** | Ejecutar pruebas funcionales y registrar hallazgos.
+- **HU02-T-15 (QA)** | Verificar el funcionamiento del endpoint POST /pedidos/prioridad.
+- **HU02-T-16 (QA)** | Validar que la prioridad se guarde correctamente en memoria.
+- **HU02-T-17 (QA)** | Verificar la selección de prioridad en frontend y su almacenamiento en el estado global.
+- **HU02-T-18 (QA)** | Validar el flujo completo de selección de prioridad y manejo de errores.
+- **HU02-T-19 (QA)** | Ejecutar pruebas funcionales y registrar hallazgos.
 
 ## Estimación: 3 puntos
 
@@ -99,32 +99,33 @@ Permitir al usuario obtener la mejor opción de envío según la prioridad selec
 ## Subtareas DEV
 
 ### Backend
-- **T-01** | Crear los DTOs necesarios para solicitar y devolver la recomendación.
-- **T-02** | Configurar los proveedores mock y sus valores de cotización.
-- **T-03** | Implementar la integración simulada con los proveedores mediante el patrón adapter.
-- **T-04** | Implementar el servicio de cotización para consultar todos los proveedores disponibles.
-- **T-05** | Implementar el motor de recomendación según prioridad y reglas de desempate utilizando los patrones strategy y factory.
-- **T-06** | Exponer el endpoint `POST /recomendacion`.
-- **T-07** | Realizar pruebas de cobertura e integración.
+- **HU03-T-01** | Crear los DTOs necesarios para solicitar y devolver la recomendación.
+- **HU03-T-02** | Configurar los proveedores mock y sus valores de cotización.
+- **HU03-T-03** | Implementar la integración simulada con los proveedores mediante el patrón adapter.
+- **HU03-T-04** | Implementar el servicio de cotización para consultar todos los proveedores disponibles.
+- **HU03-T-05** | Implementar el motor de recomendación según prioridad y reglas de desempate utilizando los patrones strategy y factory.
+- **HU03-T-06** | Exponer el endpoint `POST /recomendacion`.
+- **HU03-T-07** | Realizar pruebas de cobertura e integración.
 
 ### Frontend
-- **T-08** | Crear la pantalla de resultados con la recomendación principal destacada.
-- **T-09** | Consumir el endpoint `POST /recomendacion` utilizando los datos almacenados en el estado global.
-- **T-10** | Mostrar la recomendación principal en la interfaz.
-- **T-11** | Agregar la navegación para seleccionar el proveedor recomendado.
+- **HU03-T-08** | Crear la pantalla de resultados con la recomendación principal destacada.
+- **HU03-T-09** | Consumir el endpoint `POST /recomendacion` utilizando los datos almacenados en el estado global.
+- **HU03-T-10** | Mostrar la recomendación principal en la interfaz.
+- **HU03-T-11** | Agregar la navegación para seleccionar el proveedor recomendado.
+- **HU03-T-12** | Realizar pruebas unitarias y de cobertura.
 
 ## Subtareas QA
 
 ### Análisis y diseño
-- **T-12 (QA)** | Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros y testeables.
-- **T-13 (QA)** | Diseñar casos de prueba para recomendación por menor costo, menor tiempo y reglas de desempate.
+- **HU03-T-13 (QA)** | Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros y testeables.
+- **HU03-T-14 (QA)** | Diseñar casos de prueba para recomendación por menor costo, menor tiempo y reglas de desempate.
 
 ### Validación técnica y funcional
-- **T-14 (QA)** | Verificar el funcionamiento del endpoint `POST /recomendacion`.
-- **T-15 (QA)** | Validar que la recomendación principal corresponda a la prioridad seleccionada.
-- **T-16 (QA)** | Verificar la correcta aplicación de las reglas de desempate.
-- **T-17 (QA)** | Validar la pantalla de resultados y la visualización de la recomendación principal.
-- **T-18 (QA)** | Ejecutar pruebas funcionales del flujo de recomendación y registrar hallazgos.
+- **HU03-T-15 (QA)** | Verificar el funcionamiento del endpoint `POST /recomendacion`.
+- **HU03-T-16 (QA)** | Validar que la recomendación principal corresponda a la prioridad seleccionada.
+- **HU03-T-17 (QA)** | Verificar la correcta aplicación de las reglas de desempate.
+- **HU03-T-18 (QA)** | Validar la pantalla de resultados y la visualización de la recomendación principal.
+- **HU03-T-19 (QA)** | Ejecutar pruebas funcionales del flujo de recomendación y registrar hallazgos.
 
 ## Estimación: 8 puntos
 
@@ -142,31 +143,33 @@ Permitir al usuario visualizar opciones alternativas de proveedores de transport
 ## Subtareas DEV
 
 ### Backend
-- **T-01** | Reutilizar `RecomendacionResponse` y `CotizacionResponse` para exponer las opciones alternativas junto con la recomendación principal.
+- **HU04-T01** | Reutilizar `RecomendacionResponse` y `CotizacionResponse` para exponer las opciones alternativas junto con la recomendación principal.
+
+> **Nota:** Esta HU no requiere cambios significativos en el backend, ya que se reutilizan los DTOs existentes para incluir las opciones alternativas en la respuesta del endpoint de recomendación.
 
 ### Frontend
-- **T-02** | Mostrar la recomendación principal destacada.
-- **T-03** | Mostrar la lista de opciones alternativas de forma separada de la recomendación principal.
-- **T-04** | Mostrar en cada alternativa la información relevante para la comparación:
+- **HU04-T02** | Mostrar la recomendación principal destacada.
+- **HU04-T03** | Mostrar la lista de opciones alternativas de forma separada de la recomendación principal.
+- **HU04-T04** | Mostrar en cada alternativa la información relevante para la comparación:
   - proveedor
   - costo
   - tiempo de entrega
-- **T-05** | Permitir la selección de un proveedor alternativo desde la interfaz.
-- **T-06** | Agregar acción para seleccionar cualquiera de las opciones alternativas.
-- **T-07** | Realizar pruebas unitarias y de cobertura.
+- **HU04-T05** | Permitir la selección de un proveedor alternativo desde la interfaz.
+- **HU04-T06** | Agregar acción para seleccionar cualquiera de las opciones alternativas.
+- **HU04-T07** | Realizar pruebas unitarias y de cobertura.
 
 ## Subtareas QA
 
 ### Análisis y diseño
-- **T-08 (QA)** | Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros y testeables.
-- **T-09 (QA)** | Diseñar casos de prueba para visualización de alternativas y ausencia de alternativas.
+- **HU04-T08 (QA)** | Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros y testeables.
+- **HU04-T09 (QA)** | Diseñar casos de prueba para visualización de alternativas y ausencia de alternativas.
 
 ### Validación técnica y funcional
-- **T-10 (QA)** | Verificar que las opciones alternativas se muestren separadas de la recomendación principal.
-- **T-11 (QA)** | Validar que cada alternativa muestre proveedor, costo y tiempo de entrega.
-- **T-12 (QA)** | Verificar que la recomendación principal no se repita dentro de la lista de alternativas.
-- **T-13 (QA)** | Validar la selección de una opción alternativa desde la interfaz.
-- **T-14 (QA)** | Ejecutar pruebas funcionales y registrar hallazgos.
+- **HU04-T10 (QA)** | Verificar que las opciones alternativas se muestren separadas de la recomendación principal.
+- **HU04-T11 (QA)** | Validar que cada alternativa muestre proveedor, costo y tiempo de entrega.
+- **HU04-T12 (QA)** | Verificar que la recomendación principal no se repita dentro de la lista de alternativas.
+- **HU04-T13 (QA)** | Validar la selección de una opción alternativa desde la interfaz.
+- **HU04-T14 (QA)** | Ejecutar pruebas funcionales y registrar hallazgos.
 
 ## Estimación: 3 puntos
 
@@ -184,32 +187,32 @@ Permitir al usuario seleccionar un proveedor de envío y confirmar su selección
 ## Subtareas DEV
 
 ### Backend
-- **T-01** | Crear el modelo y los DTOs necesarios para la confirmación del pedido.
-- **T-02** | Implementar las validaciones de campos obligatorios y proveedor seleccionado.
-- **T-03** | Recalcular cotizaciones y construir la entidad final del pedido.
-- **T-04** | Implementar la persistencia del pedido mediante repositorio.
-- **T-05** | Exponer el endpoint `POST /pedidos/confirmar`.
-- **T-06** | Realizar pruebas unitarias y de integración.
+- **HU05-T01** | Crear el modelo y los DTOs necesarios para la confirmación del pedido.
+- **HU05-T02** | Implementar las validaciones de campos obligatorios y proveedor seleccionado.
+- **HU05-T03** | Recalcular cotizaciones y construir la entidad final del pedido.
+- **HU05-T04** | Implementar la persistencia del pedido mediante repositorio.
+- **HU05-T05** | Exponer el endpoint `POST /pedidos/confirmar`.
+- **HU05-T06** | Realizar pruebas unitarias y de integración.
 
 ### Frontend
-- **T-07** | Implementar la opción para confirmar el proveedor seleccionado.
-- **T-08** | Consumir el endpoint `POST /pedidos/confirmar` enviando los datos necesarios.
-- **T-09** | Redirigir a la pantalla de confirmación cuando la operación sea exitosa.
-- **T-10** | Manejar errores enviados por el backend.
-- **T-11** | Realizar pruebas unitarias y de cobertura.
+- **HU05-T07** | Implementar la opción para confirmar el proveedor seleccionado.
+- **HU05-T08** | Consumir el endpoint `POST /pedidos/confirmar` enviando los datos necesarios.
+- **HU05-T09** | Redirigir a la pantalla de confirmación cuando la operación sea exitosa.
+- **HU05-T10** | Manejar errores enviados por el backend.
+- **HU05-T11** | Realizar pruebas unitarias y de cobertura.
 
 ## Subtareas QA
 
 ### Análisis y diseño
-- **T-12 (QA)** | Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros y testeables.
-- **T-13 (QA)** | Diseñar casos de prueba para confirmación exitosa, ausencia de selección, proveedor inválido y persistencia del pedido.
+- **HU05-T12 (QA)** | Revisar que la HU, las reglas de negocio y los criterios de aceptación sean claros y testeables.
+- **HU05-T13 (QA)** | Diseñar casos de prueba para confirmación exitosa, ausencia de selección, proveedor inválido y persistencia del pedido.
 
 ### Validación técnica y funcional
-- **T-14 (QA)** | Verificar el funcionamiento del endpoint `POST /pedidos/confirmar`.
-- **T-15 (QA)** | Validar la persistencia correcta del pedido y la respuesta devuelta por el sistema.
-- **T-16 (QA)** | Verificar la selección y confirmación del proveedor en frontend, incluyendo navegación y manejo de errores.
-- **T-17 (QA)** | Ejecutar pruebas funcionales del flujo completo de confirmación.
-- **T-18 (QA)** | Registrar hallazgos y validar el cumplimiento de los criterios de aceptación.
+- **HU05-T14 (QA)** | Verificar el funcionamiento del endpoint `POST /pedidos/confirmar`.
+- **HU05-T15 (QA)** | Validar la persistencia correcta del pedido y la respuesta devuelta por el sistema.
+- **HU05-T16 (QA)** | Verificar la selección y confirmación del proveedor en frontend, incluyendo navegación y manejo de errores.
+- **HU05-T17 (QA)** | Ejecutar pruebas funcionales del flujo completo de confirmación.
+- **HU05-T18 (QA)** | Registrar hallazgos y validar el cumplimiento de los criterios de aceptación.
 
 ## Estimación: 5 puntos
 ### Justificación:
