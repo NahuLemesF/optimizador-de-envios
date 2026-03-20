@@ -13,15 +13,15 @@ Permitirle al usuario agregar pedido para calcular y obtener una recomendación 
 - Definir el modelo Pedido y los DTOs necesarios para el registro del envío.
 - Implementar validaciones de campos obligatorios, rango de peso y cobertura en Colombia.
 - Implementar conversión de unidades de peso y normalización a kilogramos.
-- Integrar el servicio externo para autocompletado de ubicaciones y cálculo de distancia.
-- Implementar endpoints GET /locations/autocomplete y POST /pedido.
+- Integrar un servicio externo de geolocalización para autocompletado de ubicaciones y cálculo de distancia (*openRouteService*).
+- Implementar endpoints `GET /locations/autocomplete` y `POST /pedido`.
 - Realizar pruebas unitarias y de cobertura para las capas del backend.
 
 ### Frontend
 - Implementar formulario de registro con origen, destino, peso y unidad.
 - Implementar autocompletado para origen y destino consumiendo el endpoint correspondiente.
 - Validar campos obligatorios y formato del peso.
-- Consumir endpoint POST /pedido y almacenar la información en el estado global.
+- Consumir endpoint `POST /pedido` y almacenar la información en el estado global.
 - Permitir la navegación al siguiente paso del flujo.
 - Realizar pruebas unitarias y de cobertura.
 
@@ -32,11 +32,18 @@ Permitirle al usuario agregar pedido para calcular y obtener una recomendación 
 - Diseñar casos de prueba para registro exitoso, validación de campos, peso fuera de rango y cobertura geográfica.
 
 ### Validación técnica y funcional
-- Verificar el funcionamiento de los endpoints GET /locations/autocomplete y POST /pedido.
+- Verificar el funcionamiento de los endpoints `GET /locations/autocomplete` y `POST /pedido`.
 - Validar el autocompletado y la restricción de ubicaciones dentro de Colombia.
 - Verificar la conversión de unidades y cálculo de distancia.
 - Validar el flujo completo desde frontend, incluyendo almacenamiento en estado global.
 - Ejecutar pruebas funcionales y registrar hallazgos.
+
+## Estimación: 5 puntos
+
+### Justificación:
+- **DEV:** Esfuerzo medio. Se implementa el registro del pedido con validaciones de datos (origen, destino y peso), construcción de DTOs y endpoint. La complejidad radica en asegurar la consistencia de los datos y su correcto guardado en el estado global. En el frontend, se desarrolla el formulario con sus correspondientes validaciones.
+- **QA**: Esfuerzo medio. Se deben cubrir casos funcionales del registro del pedido, validar campos obligatorios y verificar la correcta respuesta del backend. Los escenarios son bastante simples, por lo que no requiere pruebas complejas.
+
 
 # HU-02 | Definir prioridad del envío
 
