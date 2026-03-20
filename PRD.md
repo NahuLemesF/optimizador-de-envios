@@ -1,24 +1,29 @@
 # Producto: Optimizador de envíos
 
-## Introducción:
+## 1. Introducción:
+
+### 1.1 Problema
 A la hora de realizar el envío de un producto, las empresas/personas pueden encontrarse con el problema de no saber qué proveedor logístico elegir.
 Esto puede resultar problemático ya que una selección inadecuada puede generar mayores costos de envío o tiempos de entrega que no cumplan con lo esperado por el cliente final.
+
+### 1.2 Propuesta de valor
 El Optimizador de Envíos propone una solución que resuelve este conflicto de forma rápida, automatizada y eficiente, brindando al cliente la posibilidad de elegir si desea priorizar menor costo o mayor velocidad.
 
 ---
 
-## Visión
+## 2. Visión y Objetivos
+
+### 2.1 Visión
 Construir una herramienta logística que automatice la selección del proveedor de envíos más conveniente, ayudando a mejorar las condiciones de precio y tiempo de entrega para el cliente final.
 
----
+### 2.2 Objetivos
 
-## Objetivos
-- **Automatizar** la selección del proveedor de transporte evaluando las opciones entre **FedEx, DHL y proveedores locales**.  
-- **Centralizar** múltiples proveedores de transporte en una sola herramienta **simplificando** el proceso de toma de decisiones.  
-- Permitir la **optimización** del envío según la prioridad elegida por el cliente:  
-  - Menor costo  
-  - Menor tiempo de entrega  
-- Unificar y proveer estimaciones de precio y tiempo de entrega para entregar al cliente la opción más adecuada a sus requerimientos.
+| Objetivo | Descripción | KPI de éxito |
+| --- | --- | --- |
+| **O1** | Automatizar la selección del proveedor de transporte evaluando las opciones entre FedEx, DHL y proveedores locales. | Al menos el 90% de los usuarios reportan que la recomendación del sistema se ajusta a su prioridad seleccionada (costo o tiempo). |
+| **O2** | Centralizar múltiples proveedores de transporte en una sola herramienta simplificando el proceso de toma de decisiones. | Al menos el 80% de los usuarios encuentran la herramienta fácil de usar para comparar opciones de envío. |
+| **O3** | Permitir la optimización del envío según la prioridad elegida por el cliente: menor costo o  menor tiempo de entrega. | Al menos el 85% de los usuarios reportan que la opción recomendada cumple con su prioridad seleccionada. |
+| **O4** | Unificar y proveer estimaciones de precio y tiempo de entrega para entregar al cliente la opción más adecuada a sus requerimientos. | Al menos el 90% de los usuarios consideran que las estimaciones proporcionadas son precisas y útiles. |  
 
 ---
 
