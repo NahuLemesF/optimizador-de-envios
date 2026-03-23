@@ -88,3 +88,7 @@ Construir una herramienta logística que automatice la selección del proveedor 
 | **R5: Inconsistencia en los datos de entrada** | Si el sistema no gestiona los tipos de datos de forma adecuada (ejemplo: tipos de medidas en peso, origen y destino correctos, tipo de moneda) podría verse afectado el cálculo de las opciones disponibles. | 3 | 2 | Medio (6) | Implementar validaciones estrictas en la entrada de datos, incluyendo formatos, rangos permitidos y tipos de datos, para asegurar que la información ingresada sea consistente y adecuada para el procesamiento. |
 | **R6: Manejo insuficiente de casos límite** | Destinos sin cobertura o pesos no admitidos por los proveedores pueden generar fallos si no se controlan adecuadamente. | 3 | 1 | Bajo (3) | Desarrollar un sistema de manejo de errores robusto que identifique y gestione adecuadamente los casos límite, proporcionando mensajes claros al usuario y evitando que el sistema falle ante situaciones no contempladas. |
 
+## Flujo del proyecto 
+
+![Flujo completo del optimizador de envíos](flujo_optimizador_envios_completo.jpg)
+
